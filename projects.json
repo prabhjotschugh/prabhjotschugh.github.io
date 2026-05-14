@@ -13,7 +13,7 @@
       ,
       {
         "index": 2,
-        "title": "PuMV: Punjabi Multimodal Visual Reasoning Benchmark",
+        "title": "PuMVR: Punjabi Multimodal Visual Reasoning Benchmark",
         "description": "Engineered PuMVR, a first-of-its-kind multimodal benchmark for quantifying orthographic bias in VLMs across Gurmukhi, Shahmukhi, and Roman scripts. I developed automated evaluation pipelines to audit 10 state-of-the-art models on NVIDIA GH200 infrastructure and architected the Script Consistency Rate (SCR) metric to rigorously measure cross-script reasoning robustness.",
         "image": ["Images/PuMVR1.jpg", "Images/PuMVR2.jpg"],
         "tags": ["VLM Benchmarking", "Multilingual NLP", "Multimodal Reasoning"],
