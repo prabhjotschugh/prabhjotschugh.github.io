@@ -1,0 +1,90 @@
+﻿[      
+  {
+    "category": "Research Projects",
+    "items": [
+      {
+        "index": 1,
+        "title": "The Hallucination Snowball: Modeling Error Propagation as State Transitions in Multi-Agent LLM Pipelines",
+        "description": "This paper formalizes the hallucination snowball effect, demonstrating how errors in multi-agent LLM pipelines transform from checkable facts into unrecoverable narratives. By modeling this propagation as a first-order Markov process, the research proves that implementing boundary gates at agent handoffs reduces hallucination survival from 58.4% to 16.2%. This work provides the first mathematical framework for propagation control, offering a scalable strategy to ensure reliability in high-stakes, sequential AI architectures.",
+        "image": ["Images/hallucination_snowball1.jpg", "Images/hallucination_snowball2.jpg"],
+        "tags": ["Multi-Agent LLMs", "Markov Modeling", "AI Reliability"],
+        "links": {}
+      }
+      ,
+      {
+        "index": 2,
+        "title": "PuMV: Punjabi Multimodal Visual Reasoning Benchmark",
+        "description": "Engineered PuMVR, a first-of-its-kind multimodal benchmark for quantifying orthographic bias in VLMs across Gurmukhi, Shahmukhi, and Roman scripts. I developed automated evaluation pipelines to audit 10 state-of-the-art models on NVIDIA GH200 infrastructure and architected the Script Consistency Rate (SCR) metric to rigorously measure cross-script reasoning robustness.",
+        "image": ["Images/PuMVR1.jpg", "Images/PuMVR2.jpg"],
+        "tags": ["VLM Benchmarking", "Multilingual NLP", "Multimodal Reasoning"],
+        "links": {
+          "openreview": "https://openreview.net/forum?id=9kywe2sXGX",
+          "github": "https://github.com/prabhjotschugh/PuMVR-benchmark-for-VLMs",
+          "huggingface": "https://huggingface.co/datasets/Prabhjotschugh/PuMVR-Dataset"
+        }
+      }
+    ]
+  },
+  {
+    "category": "Production & Engineering Projects",
+    "items": [
+      {
+        "index": 1,
+        "title": "Salish Sea Digital Twin - Marine Habitat & Energy Simulation (RediMinds)",
+        "description": "Engineered a high-fidelity digital twin using Unreal Engine, integrating YOLOv8 for species classification and Physics-Informed Neural Networks (PINNs) to achieve 97% accuracy in ocean hydrology prediction. I architected the end-to-end deployment on Google Cloud Platform (GCP) and built real-time data pipelines for NOAA telemetry, synchronizing environmental metrics with complex 3D visualizations of EMF and hydrodynamic flowlines.",
+        "image": ["Images/salish1.jpeg", "Images/salish2.jpeg", "Images/salish3.jpeg", "Images/salish4.jpeg", "Images/salish5.jpeg", "Images/salish6.jpeg", "Images/salish7.jpeg", "Images/salish8.jpeg"],
+        "tags": ["PINNs (Physics-ML)", "GCP Cloud Backend", "YOLOv8 / CV"],
+        "links": {}
+      },
+      {
+        "index": 2,
+        "title": "IPOSGPT LLM - Multi-Agent RAG for Global Ocean Policy (RediMinds)",
+        "description": "Architected the GCP infrastructure and PostgreSQL schema to efficiently manage and index a high-scale repository of over 800,000 documents. Developed automated ETL pipelines for data extraction and vector embedding, and engineered a multi-agent framework to handle real-time news retrieval and performance evaluation. This technical foundation ensured a 0% hallucination rate, delivering a robust, evidence-grounded backend for national-level policy decisions.",
+        "image": ["Images/ipos1.jpg", "Images/ipos2.jpeg"],
+        "tags": ["Ocean AI", "Reliable RAG", "Domain LLM", "Policy Tech"],
+        "links": {
+          "github": "https://github.com/RediMindsResearch/IPOSGPT-Publication",
+          "website": "https://ipos.earth/iposgpt"
+        }
+      },
+      {
+        "index": 3,
+        "title": "Multi-Agent Medical RAG - High-Precision Clinical Evidence Retrieval (RediMinds)",
+        "description": "Architected a production-grade Medical RAG system integrating 70,000+ clinical documents and guidelines with sub-second retrieval latency. I optimized the engine using 16-bit vector precision scaling and a multi-tier indexing strategy (HNSW, GIN, B-Tree) to enable high-performance semantic search across diverse medical datasets. To ensure clinical safety, I developed a multi-agent evaluation framework with a dedicated Reference Checker agent that eliminated hallucinations and achieved 100% citation accuracy for automated insurance reviews.",
+        "image": "Images/medical_rag.png",
+        "tags": ["Medical AI", "Agentic RAG", "Hallucination Mitigation"],
+        "links": {}
+      },
+      {
+        "index": 4,
+        "title": "Genius AI SaaS Platform",
+        "description": "Genius AI is a unified SaaS platform that integrates text, code, image, video, and music generation into a single, seamless web application. By orchestrating advanced AI models through a user-centric interface, it eliminates workflow fragmentation and empowers non-technical creators to significantly accelerate high-quality multimedia production.",
+        "image": "Images/genius_ai.png",
+        "tags": ["Multi-modal AI", "Generative SaaS", "User-Centric Design"],
+        "links": {
+          "github": "https://github.com/prabhjotschugh/Genius-AI-SaaS"
+        }
+      },
+      {
+        "index": 5,
+        "title": "AI Digital Twin Platform",
+        "description": "Engineered an end-to-end multimodal digital twin pipeline integrating fine-tuned autoregressive language models (GPT-2) with synchronized neural text-to-speech and dynamic video lip-syncing. This architecture achieves high-fidelity persona replication, establishing a robust and scalable framework for real-time, interactive human-AI avatar deployment.",
+        "image": "Images/AI_digital_twin.png",
+        "tags": ["Multimodal Synthesis", "Neural Lip-Syncing", "Avatar Generation"],
+        "links": {
+          "github": "https://github.com/prabhjotschugh/AI-Digital-Twin"
+        }
+      },
+      {
+        "index": 6,
+        "title": "MNPJ Creations - E-Commerce Platform",
+        "description": "MNPJ Creations is a robust, full-stack e-commerce platform engineered with Django, featuring secure user authentication, dynamic product cataloging, and a comprehensive administrative dashboard for inventory and order management. By integrating live PayPal payment processing alongside localized checkout options, the system ensures a frictionless, secure, and accessible transaction experience. This project demonstrates end-to-end web architecture proficiency, successfully delivering a scalable digital storefront that serves both consumer workflows and backend administrative needs.",
+        "image": ["Images/mnpj1.png", "Images/mnpj2.png"],
+        "tags": ["E-Commerce", "Django", "User Authentication"],
+        "links": {
+          "github": "https://github.com/prabhjotschugh/MNPJ-Creations-eCommerce-website"
+        }
+      }
+    ]
+  }
+]

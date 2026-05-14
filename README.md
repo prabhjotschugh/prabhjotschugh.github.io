@@ -1,10 +1,23 @@
-# Portfolio
-In my portfolio, you'll find a snapshot of my coding journey through a collection of diverse projects. From sleek web designs to efficient algorithms, each repository reflects my dedication to clean and creative solutions. Join me in exploring the art of coding!
+# Prabhjot Singh - Portfolio
 
-Live Link - https://prabhjotschugh.github.io/
+A clean, modern, and responsive academic portfolio featuring dark mode, dynamic project/publication loading, and a mobile-friendly design.
 
-# Homepage
-![Portfolio](https://github.com/prabhjotschugh/Portfolio/assets/64200536/ad0aec5c-5e59-410b-b650-313e15b200d3)
+## 🚀 Quick Start
+1. Clone the repository.
+2. Open `index.html` in any web browser.
 
+## 📁 Structure
+- `index.html`: Main structure and SPA logic.
+- `style.css`: Modern typography and theme variables.
+- `script.js`: Handles page routing, theme toggling, and data fetching.
+- `projects.json` / `publications.json`: Data sources for easy updates.
+- `Images/`: Static assets and media.
 
+## ✨ Features
+- **SPA Architecture**: Smooth navigation without page reloads.
+- **Auto Dark Mode**: Responds to system preferences with manual override.
+- **Dynamic Content**: Renders projects and publications from JSON.
+- **Mobile Optimized**: Custom drawers for navigation and social links.
 
+---
+© 2026 Prabhjot Singh

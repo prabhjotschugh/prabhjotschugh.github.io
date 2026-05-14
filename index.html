@@ -1,307 +1,417 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width-device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Prabhjot Singh</title>
-  <link rel="icon" href="css/image.png">
-  <link rel="stylesheet" href="css/styles.css">
-
-  <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
-  <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap"
-    rel="stylesheet">
+  <meta name="description" content="MS AI student at UT Austin (GPA 4.0) and AI Engineer at RediMinds Inc. First-author papers at ICLR 2026, ACL 2026, and Springer Nature." />
+  <link rel="icon" type="image/png" href="Images/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
+<body data-page="home">
 
-<body>
-
-  <!-- HEADER -->
-  <header>
-    <a href="#" class="logo">Portfolio</span> </a>
-    <button id="theme-toggle">
-      <span class="toggle-icon">
-        <i class="fas fa-sun"></i>
-        <i class="fas fa-moon"></i>
-      </span>
+  <!-- NAVBAR -->
+  <header class="topbar">
+    <a class="topbar-brand" href="#" onclick="showPage('home', this)">Prabhjot Singh</a>
+    <nav>
+      <ul class="topbar-nav" id="mainNav">
+        <li><a href="#" class="active" onclick="showPage('home', this); return false;">Home</a></li>
+        <li><a href="#" onclick="showPage('about', this); return false;">About</a></li>
+        <li><a href="#" onclick="showPage('publications', this); return false;">Publications</a></li>
+        <li><a href="#" onclick="showPage('projects', this); return false;">Projects</a></li>
+        <li><a href="#" onclick="showPage('cv', this); return false;">CV</a></li>
+        <li><a href="#" onclick="showPage('contact', this); return false;">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="hamburger" id="hamburgerBtn" aria-label="Open menu">
+      <span></span><span></span><span></span>
     </button>
-    <div class="bx bx-menu" id="menu-icon"></div>
-
-    <ul class="navbar">
-      <li><a id="nava" href="#home">Home</a></li>
-      <li><a id="nava" href="#about">About</a></li>
-      <li><a id="nava" href="#services">Services</a></li>
-      <li><a id="nava" href="https://drive.google.com/file/d/1p5tviAV1jy7TlAPbYiZvnG7568Qa-X9W/view">Resume</a></li>
-      <li><a id="nava" href="#contact">Contact</a></li>
-      <li><a id="nava" href="#projects">Projects</a></li>
+    <button class="theme-toggle" id="themeToggleBtn" aria-label="Toggle theme">
+      <svg class="icon-sun" style="display:none;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+      <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </button>
   </header>
 
+  <!-- MOBILE DRAWER -->
+  <div class="mob-overlay" id="mobOverlay"></div>
+  <nav class="mob-drawer" id="mobDrawer">
+    <a href="#" onclick="showPage('home', null); closeDrawer();">Home</a>
+    <a href="#" onclick="showPage('about', null); closeDrawer();">About</a>
+    <a href="#" onclick="showPage('publications', null); closeDrawer();">Publications</a>
+    <a href="#" onclick="showPage('projects', null); closeDrawer();">Projects</a>
+    <a href="#" onclick="showPage('cv', null); closeDrawer();">CV</a>
+    <a href="#" onclick="showPage('contact', null); closeDrawer();">Contact</a>
+  </nav>
 
-  <!-- START HOME -->
-  <section class="home" id="home">
-    <div class="home-text">
-      <h5>Hello, I am</h5>
-      <h1>Prabhjot Singh</h1>
-      <h5>I'm a <span style="color: var(--main-color);" class="input"></span></h5>
-      <p>Hey! 😄 I'm a coding enthusiast obsessed with data structures, crafting boundary-pushing AI and ML projects and stylish websites. Eager to learn and revolutionize data science and web dev. Join me on this epic journey! 🔥🔥</p>
-      <a href="https://drive.google.com/file/d/1p5tviAV1jy7TlAPbYiZvnG7568Qa-X9W/view" class="btn"><strong>Download CV</strong></a>
-    </div>
+  <!-- MOBILE SOCIAL DRAWER -->
+  <aside class="mobile-social-drawer" id="mobileSocialDrawer" style="display: none;">
+    <h3>Contact Me</h3>
+    <ul class="social-list">
+      <li><a href="mailto:prabhjotchugh0805@gmail.com">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+        Email
+      </a></li>
+      <li><a href="https://scholar.google.com/citations?user=MOCwrwkAAAAJ&hl=en" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5h3.64v9.36h2.91V9.5h1.82L12 6.77l3.63 2.73H17.45v9.36h2.91V9.5H24L12 0z"/></svg>
+        Google Scholar
+      </a></li>
+      <li><a href="https://orcid.org/0009-0005-4027-9856" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zM7.37 4.38c.525 0 .947.43.947.947s-.422.947-.947.947a.95.95 0 0 1-.947-.947c0-.526.422-.947.947-.947zm-.72 3.04h1.44v10.04H6.65V7.42zm3.56 0h3.9c3.71 0 5.34 2.65 5.34 5.02 0 2.58-2.02 5.02-5.32 5.02h-3.92V7.42zm1.44 1.3v7.44h2.3c3.27 0 3.87-2.2 3.87-3.72 0-2.02-1.28-3.72-3.83-3.72h-2.34z"/></svg>
+        ORCID
+      </a></li>
+      <li><a href="https://github.com/prabhjotschugh" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+        GitHub
+      </a></li>
+      <li><a href="https://linkedin.com/in/prabhjot-singh-chugh" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        LinkedIn
+      </a></li>
+      <li><a href="https://x.com/prabhjotschugh" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.259 5.629L18.245 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        X
+      </a></li>
+    </ul>
+  </aside>
 
-    <div class="home-img">
-      <img src="css/image.png" alt="">
-    </div>
-  </section>
-
-
-
-  <!-- START ABOUT -->
-  
-  <section class="about" id="about">
-    <div class="about-img">
-      <img src="css/about_image.png" alt="">
-    </div>
-
-    <div class="about-text">
-      <h3>About Me</h3>
-      <h2>A music lover turned coding enthusiast, crafting symphonies with algorithms.</h2>
-      <p>I am a driven and dynamic final year BTech student, fueled by my passion for coding, unwavering enthusiasm for Machine Learning, and the joy of playing musical instruments. When not indulging in pizza, I'm devoted to utilizing technology as a force for good, with a burning desire to bring about a positive impact in society. </p>
-      <div class="main-btn">
-        <a href="#contact" class="btn"><strong>Contact Me</strong></a>
-        <a href="#resume" class="btn"><strong>Portfolio</strong></a>
-      </div>
-    </div>
-  </section>
-
-  <!-- start audio -->
-  <section class="audio-sec">
-    <div class="confused-img" style="text-align: center;">
-      <img src="confused.png" alt="confused">
-    </div>
-    <div class="audio-text">
-      <h2>Why BTech?<br>Why Engineering?</h2> <br>
-      <!-- <img src="play.png" id="icon"> -->
-      <audio id="myAudio" src="degree.mp3"></audio>
-    <button  id="playButton" class="btn" onclick="playPause()"><i class='bx bx-play-circle'></i>Play</button>
-
-    <script>
-        var audio = document.getElementById("myAudio");
-        var playButton = document.getElementById("playButton");
-
-        function playPause() {
-            if (audio.paused) {
-                audio.play();
-                playButton.innerHTML = "<i class='bx bx-pause-circle' ></i>Pause";
-            } else {
-                audio.pause();
-                playButton.innerHTML = "<i class='bx bx-play-circle'></i>Play";
-            }
-        }
-
-        audio.onended = function () {
-            playButton.innerHTML = "<i class='bx bx-play-circle'></i>Play";
-        };
-    </script>
-    </div>
-  </section>
-
-  <!-- START SERVICES -->
-  <section class="services" id="services">
-    <div class="center">
-      <h3>WHAT I DO?</h3>
-    </div>
-
-    <div class="service-content">
-
-      <div class="row">
-        <i class='bx bx-desktop'></i>
-        <h3>Frontend Web Dev</h3>
-        <p>Forging the Future of the Web: Weaving Aesthetic Elegance and Seamless Functionality at the Front-End</p>
-      </div>
-
-
-      <div class="row">
-        <i class='bx bxs-trophy'></i>
-        <h3>Programming</h3>
-        <p>Mastering the Language of Machines: A Symphony of Code and Logic, Crafting the Digital Landscape</p>
-        <br>
-        <a href="https://leetcode.com/prabhjotschugh/" style="margin-right: 40px; display: inline-block; vertical-align: middle; line-height: 1;">
-          <iconify-icon icon="simple-icons:leetcode" style="font-size: 35px; color: green;"></iconify-icon>
-        </a>
-        <a href="https://www.codechef.com/users/prabhjotschugh" style="margin-right: 40px; display: inline-block; vertical-align: middle; line-height: 1;">
-          <iconify-icon icon="simple-icons:codechef" style="font-size: 35px; color: white;"></iconify-icon>
-        </a>
-        <a href="https://codeforces.com/profile/prabhjotschugh" style="margin-right: 40px; display: inline-block; vertical-align: middle; line-height: 1;">
-          <iconify-icon icon="simple-icons:codeforces" style="font-size: 35px; color: white;"></iconify-icon>
-        </a>
-
-      </div>
-
-      <div class="row">
-        <i class='bx bxs-music'></i>
-        <h3>Music</h3>
-        <p>Maestro of Melodic Marvels: Crafting Awe-Inspiring Soundscapes Through Instrumental Mastery</p>
-      </div>
-
-    </div>
-  </section>
-
-<!-- my projects -->
-<section class="services" id="projects">
-    <div class="center">
-      <h3>PROJECTS</h3>
-    </div>
-
-    <div class="service-content projects">
-      <a href="https://prabhjotschugh-mnpj-creations-ecommerce.onrender.com/">
-        <div class="row">
-          <img src="css/MNPJ Creations.png" width="100%"  alt="">
-          <h3>MNPJ Creations<i class='bx bxs-right-arrow-circle'></i></h3>
-          <p>Embrace the beauty of craftsmanship at MNPJ Creations - Your gateway to artisanal treasures.</p>
-        </div>
-      </a>
-
-      <a href="https://github.com/prabhjotschugh/Loan-Eligibility-Predictor">
-        <div class="row">
-          <img src="css/Loan Eligibility.png" width="100%"  alt="">
-          <h3>LoanSense<i class='bx bxs-right-arrow-circle'></i></h3>
-          <p>Empowering loan approvals - LoanSense, making informed decisions based on applicant attributes.</p>
-        </div>
-      </a>
-
-      <a href="https://prabhjotschugh.github.io/Adventua/">
-        <div class="row">
-          <img src="css/Adventua.png" width="100%"  alt="">
-          <h3>Adventua<i class='bx bxs-right-arrow-circle'></i></h3>
-          <p>Your passport to seamless travel experiences, where wanderlust meets hassle-free holiday planning.</p>
-        </div>
-      </a>
-
-
-      <a href="">
-        <div class="row">
-          <img src="css/portfolio1.png" width="100%"  alt="">
-          <h3>Portfolio<i class='bx bxs-right-arrow-circle'></i> </h3>
-          <p>Unlocking creativity, one project at a time - Explore the wonders of my portfolio!</p>
-        </div>
-      </a>
-
-
-      <a href="https://prabhjotschugh.github.io/WeatherWise/">
-        <div class="row">
-          <img src="css/WeatherWise.png" width="100%"  alt="">
-          <h3>WeatherWise<i class='bx bxs-right-arrow-circle'></i> </h3>
-          <p>Explore global weather effortlessly - WeatherWise, your meteorological companion.</p>
-        </div>
-      </a>
-
-
-      <a style="color: white;" href="https://github.com/prabhjotschugh">
-        <div class="row">
-          <i class='bx bxl-github'></i>
-          <h3>For more..</h3>
-          <p>Visit My Github for more & more projects! </p>
-        </div>
-      </a>
-
-
-    </div>
-  </section>
-
-
-  <!-- CTA -->
-  <section class="cta" id="class">
-    <h4>Have A Project In Your Mind ?</h4>
-    <h2>Just Say <br>"Hello"</h2>
-    <a href="#contact" class="btn"> <strong>Hire Me</strong> </a>
-  </section>
-
-
-  <!-- RESUME -->
-
-  <section class="resume" id="resume">
-    <div class="center">
-      <h3>Education</h3>
-    </div>
-
-    <div class="resume-content">
-      
-      <div class="box">
-        <h6>May 2016</h6>
-        <h4>Secondary Exam</h4>
-        <h5>D.P.S Panipat City - 10 C.G.P.A</h5>
-      </div>
-
-      <div class="box">
-        <h6>May 2018</h6>
-        <h4>Senior Secondary Exam</h4>
-        <h5>D.P.S Panipat City  - 96.2%</h5>
-      </div>
-
-      <div class="box">
-        <h6>August 2020 - Present</h6>
-        <h4>BTech CSE (AI & DS)</h4>
-        <h5>Kurukshetra University - 9.0 C.G.P.A</h5>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- CONTACT ME -->
-  <section class="contact" id="contact">
-    <div class="center">
-      <h3>Contact Me</h3>
-      <br>
-      <a href="https://www.instagram.com/prabhjot_chugh/"><i class="fa-brands fa-square-instagram"></i></a>
-      <a href="https://www.linkedin.com/in/prabhjot-singh-chugh/"><i class="fa-brands fa-linkedin"></i></a>
-      <a href="https://github.com/prabhjotschugh"><i class="fa-brands fa-square-github"></i></a>
-    </div>
-
-    <div class="contact-form">
-      <form action="mailto:prabhjotchugh0805@gmail.com" method="post" enctype="text/plain">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Email Address" required>
-        <input type="number" name="phone" placeholder="Contact">
-        <textarea name="Message" rows="10" cols="30" placeholder="Your Message" required></textarea>
-        <input type="submit" name="" value="Send" class="send-btn">
-      </form>
-    </div>
-  </section>
-
-  <!-- COPYRIGHT -->
-  <div class="copyright">
-    <p>Designed with &#10084; by <b>Prabhjot Singh</b></p>
-
+  <!-- BANNER -->
+  <!-- <div class="banner-wrap">
+    <img src="banner7.png" alt="Banner" onerror="this.style.display='none'" />
+  </div> -->
+  <div class="banner-wrap">
+    <video autoplay muted loop playsinline poster="Images/banner_image.png" class="banner-video">
+      <source src="Images/banner_video.mp4" type="video/mp4">
+      <!-- Optional: Add a WebM source for better compression -->
+      <!-- <source src="your-video.webm" type="video/webm"> -->
+      Your browser does not support the video tag.
+    </video>
   </div>
-  <script src="https://unpkg.com/scrollreveal"></script>
-  <!-- LINK TO JS -->
-  <script src="js/script.js" charset="utf-8"></script>
-  <script src="script.js" charset="utf-8"></script>
-  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-  <script>
-    var Typed = new Typed(".input", {
-      strings: [
-        "Web Developer Whiz",
-        "Coding Connoisseur",
-        "Machine Learning Maven",
-        "Music Phile",
-        "Food Aficionado",
-      ],
-      typeSpeed: 60,
-      backSpeed: 60,
-      loop: true,
+  <!-- PAGE BODY -->
+  <div class="page-body">
 
-    });
+    <!-- LEFT: Profile -->
+    <aside class="left-col">
+      <div class="profile-photo-wrap">
+        <!-- <div class="profile-photo-placeholder">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="8" r="4.5"/>
+            <path d="M3 21c0-4.5 4-8 9-8s9 3.5 9 8"/>
+          </svg>
+        </div> -->
+        <img src="Images/pic.png" alt="Prabhjot Singh" class="profile-photo">
+    </div>
 
-    const toggleModeBtn = document.getElementById("toggle-mode");
-    const body = document.body;
+      <h1 class="profile-name">Prabhjot Singh</h1>
+      <p class="profile-role">MS Student &amp; AI Engineer</p>
 
-    toggleModeBtn.addEventListener("click", function () {
-      body.classList.toggle("dark-mode");
-    });
-  </script>
+      <hr class="profile-divider" />
+
+      <div class="profile-affil-container">
+        <img src="Images/University_of_Texas_at_Austin.png" alt="UT Austin" class="ut-logo">
+        <div>
+          <p class="profile-affil"><a href="mailto:prabhjot.singh@utexas.edu">prabhjot.singh@utexas.edu</a></p>
+          <p class="profile-affil"><strong>University of Texas at Austin</strong></p>
+        </div>
+      </div>
+
+      <button class="mobile-contact-trigger" id="mobileContactTriggerBtn" style="display:none;">Contact</button>
+
+      <hr class="profile-divider" />
+
+      <ul class="social-list">
+        <li><a href="mailto:prabhjotchugh0805@gmail.com">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+          Email
+        </a></li>
+        <li><a href="https://scholar.google.com/citations?user=MOCwrwkAAAAJ&hl=en" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5h3.64v9.36h2.91V9.5h1.82L12 6.77l3.63 2.73H17.45v9.36h2.91V9.5H24L12 0z"/></svg>
+          Google Scholar
+        </a></li>
+        <li><a href="https://orcid.org/0009-0005-4027-9856" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zM7.37 4.38c.525 0 .947.43.947.947s-.422.947-.947.947a.95.95 0 0 1-.947-.947c0-.526.422-.947.947-.947zm-.72 3.04h1.44v10.04H6.65V7.42zm3.56 0h3.9c3.71 0 5.34 2.65 5.34 5.02 0 2.58-2.02 5.02-5.32 5.02h-3.92V7.42zm1.44 1.3v7.44h2.3c3.27 0 3.87-2.2 3.87-3.72 0-2.02-1.28-3.72-3.83-3.72h-2.34z"/></svg>
+          ORCID
+        </a></li>
+        <li><a href="https://github.com/prabhjotschugh" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+          GitHub
+        </a></li>
+        <li><a href="https://linkedin.com/in/prabhjot-singh-chugh" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          LinkedIn
+        </a></li>
+        <li><a href="https://x.com/prabhjotschugh" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.259 5.629L18.245 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          X
+        </a></li>
+      </ul>
+    </aside>
+
+    <!-- RIGHT: Pages -->
+    <main class="right-col">
+
+      <!-- ══ HOME ══ -->
+      <div class="page active" id="page-home">
+        <h2 class="about-heading">About Me</h2>
+        <div class="bio">
+          <p>
+            I am an <strong>MS student in Artificial Intelligence</strong> at the <strong>University of Texas at Austin</strong> (GPA 4.0) and a full-time <strong>AI Engineer at RediMinds Inc.</strong>
+          </p>
+          <p>
+            I build for domains where failure is not an option. My systems are in production today: domain-specific RAG pipelines at massive scale helping governments make ocean policy decisions and giving doctors clinically grounded evidence for insurance reviews, multi-agent architectures automating enterprise workflows, and physics-informed models extracting deformation signals from satellite radar to help prevent geophysical disasters.
+          </p>
+          <p>
+            I approach research with the mindset of an engineer: if it does not work in production, it does not count. My work spans <strong>AI for Science</strong>, <strong>Trustworthy AI</strong>, <strong>Multi-Agent Systems</strong>, <strong>Physics-Informed ML</strong>, and <strong>Multimodal NLP</strong>, published in <strong>Nature Portfolio</strong>, presented as an oral at <strong>ICLR 2026</strong>, and accepted at <strong>ACL 2026</strong>.
+          </p>
+            <p style="font-size: 1rem; letter-spacing: 0.02em; margin-top: 24px; font-style: italic;"><strong style="font-weight: 700;">Researcher. Engineer. Founder in progress.</strong></p>
+        </div>
+
+        <h2 class="page-heading" style="margin-top: 48px;">Latest News</h2>
+        <div class="news-list">
+          <div class="news-item">
+            <span class="news-date">May 2026</span>
+            <span class="news-text">Invited to serve as a reviewer at the <strong>FAGEN Workshop @ ICML 2026</strong>.</span>
+          </div>
+          <div class="news-item">
+            <span class="news-date">May 2026</span>
+            <span class="news-text">Paper accepted at the <strong>C3NLP Workshop @ ACL 2026</strong>!</span>
+          </div>
+          <div class="news-item">
+            <span class="news-date">Mar 2026</span>
+            <span class="news-text">Our paper "Trustworthy AI for the Ocean" got accepted in <strong>npj Ocean Sustainability (Nature Portfolio)</strong>.</span>
+          </div>
+          <div class="news-item">
+            <span class="news-date">Feb 2026</span>
+            <span class="news-text">Our work "When Less Is More" was accepted for an <strong>Oral Presentation at ICLR 2026</strong>.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ══ ABOUT ══ -->
+      <div class="page" id="page-about">
+        <h2 class="about-heading">Behind the Code ✨</h2>
+        <p class="about-tagline" style="font-size: 1.05rem; font-style: italic;">
+          A music lover turned coding enthusiast, crafting symphonies with algorithms. 🎵🤖
+        </p>
+        <div class="bio">
+          <p>
+            Hi, I'm Prabhjot Singh! Outside of the strict, hyper-professional world of research papers and production deployments, I am just someone who is deeply obsessed with how things work. 
+          </p>
+          <p>
+            I am fueled by an unwavering enthusiasm for Machine Learning, but my brain needs creative outlets to keep functioning. That is where music comes in. 🎹 I love playing musical instruments, it’s how I decompress and find rhythm when the code isn't cooperating. 
+          </p>
+          <p>
+            When I am not aggressively hunting down edge cases in multi-agent LLM pipelines or deep in focus mode at 2 AM, I am probably indulging in a terrifying amount of pizza. 🍕
+          </p>
+          <p>
+            Ultimately, I view technology as a tool for leverage. I have a burning desire to build systems that actually survive contact with reality, rather than just looking good on a whiteboard. My ultimate long-term goal is to build and lead my own AI startup focused on trustworthy, production-grade systems. 📈
+          </p>
+          <p>
+            I am currently putting in the reps and laying the groundwork for that venture. Until I have the funding to hire a real engineering team, I am practicing my management skills by hallucinating industry leaders like Sundar Pichai, Elon Musk, Mark Zuckerberg into my highly ambitious, completely fictional intern cohort. (See undeniable, 100% photorealistic, definitely-not-AI-generated photographic evidence below). 📸😎
+          </p>
+          <div class="about-image-wrap" style="max-width: 800px; margin: 40px auto; box-shadow: 0 8px 30px rgba(0,0,0,0.4);">
+            <img src="Images/prabh_startup.jpeg" alt="Selfie with my totally real interns" onerror="this.src='Images/prabh_startup.jpg'; this.onerror=null;">
+          </div>
+          <p style="font-size: 0.85rem; color: var(--text-muted); text-align: center; font-style: italic; margin-top: -24px; margin-bottom: 32px;">Disclaimer: This is a joke. The interns are not real. The ambition, unfortunately, is.</p>
+          
+          <div style="margin-top: 48px; padding-top: 32px; border-top: 1px solid var(--border-light);">
+            <div style="display: flex; align-items: baseline; gap: 16px; margin-bottom: 8px;">
+              <h3 style="font-family: var(--font-base); font-size: 1.4rem; font-weight: 700; color: var(--text-primary); margin: 0;">Why BTech? Why Engineering?</h3>
+              <audio id="engineeringAudio" src="Images/degree.mp3" onended="const btn = document.getElementById('audioPlayBtn'); btn.innerHTML = '<svg viewBox=\'0 0 24 24\'><polygon points=\'5 3 19 12 5 21 5 3\'/></svg> Play'; btn.style.background = ''; btn.style.color = ''; btn.style.borderColor = '';"></audio>
+              <button id="audioPlayBtn" class="play-btn" style="padding: 4px 12px; font-size: 0.8rem;" onclick="const audio = document.getElementById('engineeringAudio'); if(audio.paused) { if(audio.currentTime > 0 && audio.ended) { audio.currentTime = 0; } audio.play(); this.style.background = 'var(--link)'; this.style.color = 'var(--white)'; this.style.borderColor = 'var(--link)'; this.innerHTML = '<svg viewBox=\'0 0 24 24\'><rect x=\'6\' y=\'4\' width=\'4\' height=\'16\'/><rect x=\'14\' y=\'4\' width=\'4\' height=\'16\'/></svg> Pause'; } else { audio.pause(); this.style.background = ''; this.style.color = ''; this.style.borderColor = ''; this.innerHTML = '<svg viewBox=\'0 0 24 24\'><polygon points=\'5 3 19 12 5 21 5 3\'/></svg> Play'; }">
+                <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                Play
+              </button>
+            </div>
+            <p style="font-size: 0.95rem; color: var(--text-secondary); margin-bottom: 16px;">The real, unfiltered, brutally honest reason I chose this path. Give it a listen.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ══ PUBLICATIONS ══ -->
+      <div class="page" id="page-publications">
+        <h2 class="page-heading">Publications</h2>
+        <p class="page-subheading">Peer-reviewed papers, workshop publications, and works under review.</p>
+        <div id="publications-container"></div>
+      </div>
+
+      <!-- ══ PROJECTS ══ -->
+      <div class="page" id="page-projects">
+        <h2 class="page-heading">Projects</h2>
+        <p class="page-subheading">Research projects, production systems, and independent work.</p>
+        <div id="projects-container"></div>
+      </div>
+
+      <!-- ══ CV ══ -->
+      <div class="page" id="page-cv">
+        <h2 class="page-heading">Curriculum Vitae</h2>
+        <p class="page-subheading">A detailed record of my academic and professional journey. <a href="https://docs.google.com/document/d/1GnH4NmxF2fT2n2zV5Jm_2Tj5-8X9YqB_n8n5lXfVvLo/edit?usp=sharing" target="_blank" rel="noopener">Download PDF ↗</a></p>
+        <br><br>
+        <div class="cv-container">
+          <header class="cv-header">
+            <h2>Prabhjot Singh</h2>
+            <p>Panipat, Haryana, India · Remote · UTC+5:30</p>
+          </header>
+
+          <section class="cv-section">
+            <h3>Education</h3>
+            <div class="cv-item">
+              <h4>MS in Artificial Intelligence · The University of Texas at Austin</h4>
+              <p class="cv-item-meta">2025 – Present · GPA 4.0 / 4.0</p>
+              <ul>
+                <li><strong>Focus:</strong> NLP, Vision-Language Models, Multi-Agent Systems</li>
+                <li><strong>Compute:</strong> TACC Vista (GH200 nodes)</li>
+              </ul>
+            </div>
+            <div class="cv-item">
+              <h4>B.Tech in CSE (AI & Data Science) · Kurukshetra University</h4>
+              <p class="cv-item-meta">2020 – 2024 · GPA 9.0 / 10.0</p>
+              <ul>
+                <li>100% Merit Scholarship: Awarded a full tuition waiver for all four years of study based on academic excellence.</li>
+                <li>University Rank 1: Gold Medalist (First Year).</li>
+                <li>University Rank 2: Silver Medalist (Pre-final Year).</li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="cv-section">
+            <h3>Work Experience</h3>
+            <div class="cv-item">
+              <h4>AI Engineer · RediMinds Inc.</h4>
+              <p class="cv-item-meta">May 2024 – Present · Remote (USA-based)</p>
+              
+              <h5>IPOS Ocean GPT - Ocean Policy RAG System (npj Ocean Sustainability, Nature Portfolio)</h5>
+              <ul>
+                <li>Independently designed and implemented the entire PostgreSQL schema on GCP, building a system that indexes over 800,000 documents from 47 sources including OpenAlex, Semantic Scholar, FAO, UNEP, and the International Maritime Organization.</li>
+                <li>Built automated ETL pipelines using GCP Cloud Run for large-scale parallel ingestion, deduplication, and vector embedding generation across scientific papers, policy documents, and NGO datasets.</li>
+                <li>Engineered a multi-agent RAG framework with a dedicated Reference Checker Agent, achieving a 0% citation hallucination rate across all evaluated queries.</li>
+                <li>Developed a real-time News Agent integrating Bing Search API, with iterative prompt engineering to ensure source accuracy and recency.</li>
+                <li>Built three distinct evaluation frameworks: Agentic, LLM-as-a-Judge (Grok and Deepseek as judges), and a Reference Quality Evaluator, producing the first comprehensive evaluation suite for the system.</li>
+                <li>System was successfully piloted with the Government of Seychelles to accelerate circular economy policy decisions around marine plastic pollution.</li>
+              </ul>
+
+              <h5>Evidence Support System - Medical RAG Pipeline</h5>
+              <ul>
+                <li>Designed and evolved a normalized PostgreSQL schema across multiple iterations, ultimately housing 70,000+ clinical documents across ODG, MD, State, ACOEM, MCG, Cascade, and InterQual guideline types.</li>
+                <li>Built specialized ingestion pipelines per guideline type, including PubMed and PMC API integration, OCR-based PDF parsing (benchmarked pytesseract, markitdown, and Gemini OCR), and full-document indexing for state guidelines.</li>
+                <li>Reduced retrieval latency to under 1 second through two targeted optimizations: switching from 32-bit to 16-bit halfvec embeddings (scaling dimensionality from 768 to 3072 without performance degradation) and implementing a multi-tier indexing strategy combining HNSW, B-Tree, and GIN indexes.</li>
+                <li>Validated system reliability using LLM-based evaluation against Claude and Gemini, achieving 100% reference accuracy and top quality scores across all tested clinical cases.</li>
+                <li>Refactored backend from FastAPI to Flask, built production endpoints, and deployed an internal Streamlit testing interface used for company accreditation.</li>
+                <li>Migrated the entire backend to the new google-genai SDK, integrating support for gemini-3.1-pro-preview and gemini-3-flash-preview with dynamic global endpoint routing.</li>
+              </ul>
+              
+              <h5>IRO Project - Healthcare Credentialing Pipeline (28 US States)</h5>
+              <ul>
+                  <li>Conducted field-level credentialing mapping across all 50 US states and delivered a structured comparative report to the team.</li>
+                  <li>Built end-to-end license and sanctions check pipelines for 28 states, covering NPI API integration, state website scraping with reCAPTCHA handling, license number normalization, and automated credential verification.</li>
+                  <li>Integrated OIG-LEIE federal sanctions checks and standardized all outputs into a unified schema for automated report generation in PDF and markdown.</li>
+              </ul>
+
+              <h5>Salish Sea Digital Twin - Marine Habitat Simulation</h5>
+              <ul>
+                  <li>Developed and deployed a YOLOv8-based fish detection and classification model achieving 94% accuracy, enabling real-time marine species identification inside an Unreal Engine 3D simulation.</li>
+                  <li>Engineered Physics-Informed Neural Networks (PINNs) for underwater hydrology prediction achieving 97% accuracy, with real-time current and tide data visualized as dynamic 3D flowlines and arrows.</li>
+                  <li>Integrated live NOAA telemetry data and built real-time pipelines synchronizing environmental metrics with EMF visualizations, tidal turbine dashboards, and wave energy modules.</li>
+                  <li>Contributed to a published methodology for assessing and monitoring marine benthic and pelagic habitats in the Salish Urban Sea System, demonstrating how AI and digital twins can reduce adverse environmental impacts at tidal energy harvesting sites.</li>
+                  <li>Deployed the entire backend to GCP, independently navigating the platform and delivering a production system used in active marine research.</li>
+              </ul>
+              
+              <h5>Agentic AI Systems</h5>
+              <ul>
+                  <li>Evaluated CrewAI, LangGraph, n8n, and custom architectures across multiple projects to establish a unified agentic tech stack at RediMinds.</li>
+                  <li>Decomposed an employee onboarding and offboarding workflow into 14 automatable components and initiated system design for the full agentic pipeline.</li>
+              </ul>
+              
+              <div class="tech-stack-list">
+                <span class="tech-stack-item">Python</span><span class="tech-stack-item">GCP (Cloud Run, Cloud Storage, VM)</span><span class="tech-stack-item">PostgreSQL</span><span class="tech-stack-item">pgvector</span><span class="tech-stack-item">HNSW</span><span class="tech-stack-item">FastAPI</span><span class="tech-stack-item">Flask</span><span class="tech-stack-item">Streamlit</span><span class="tech-stack-item">CrewAI</span><span class="tech-stack-item">LangGraph</span><span class="tech-stack-item">LangChain</span><span class="tech-stack-item">YOLOv8</span><span class="tech-stack-item">PINNs</span><span class="tech-stack-item">HuggingFace</span><span class="tech-stack-item">OpenAI</span><span class="tech-stack-item">Gemini</span><span class="tech-stack-item">Grok</span><span class="tech-stack-item">Deepseek</span><span class="tech-stack-item">Anthropic APIs</span><span class="tech-stack-item">PySpark</span><span class="tech-stack-item">React</span><span class="tech-stack-item">Node.js</span><span class="tech-stack-item">Unreal Engine</span><span class="tech-stack-item">Power BI</span>
+              </div>
+            </div>
+            <div class="cv-item">
+              <h4>ML Engineer Intern · iNeuron.ai</h4>
+              <p class="cv-item-meta">July 2023 – August 2023</p>
+              <ul>
+                <li>Built a mushroom toxicity classifier on a balanced dataset of 8,124 instances (3,916 poisonous, 4,208 edible), achieving 100% accuracy, precision, recall, and F1 through rigorous data preprocessing and model selection.</li>
+                <li>Deployed as a full-stack web application using Python, Flask, HTML, and CSS.</li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="cv-section cv-tech-skills">
+            <h3>Technical Skills</h3>
+            <div>
+              <strong>AI / ML:</strong>
+              <span class="skill-tag">LLM Fine-tuning</span><span class="skill-tag">LoRA</span><span class="skill-tag">QLoRA</span><span class="skill-tag">RAG</span><span class="skill-tag">HNSW</span><span class="skill-tag">pgvector</span><span class="skill-tag">Multi-Agent Systems</span><span class="skill-tag">CrewAI</span><span class="skill-tag">LangGraph</span><span class="skill-tag">LangChain</span><span class="skill-tag">VLMs</span><span class="skill-tag">YOLOv8</span><span class="skill-tag">PINNs</span><span class="skill-tag">Diffusion Models</span><span class="skill-tag">Physics-Informed ML</span>
+            </div>
+            <div>
+              <strong>Frameworks:</strong>
+              <span class="skill-tag">PyTorch</span><span class="skill-tag">TensorFlow</span><span class="skill-tag">HuggingFace</span><span class="skill-tag">FastAPI</span><span class="skill-tag">Flask</span><span class="skill-tag">Streamlit</span><span class="skill-tag">React</span><span class="skill-tag">Next.js</span><span class="skill-tag">Django</span>
+            </div>
+            <div>
+              <strong>Infrastructure:</strong>
+              <span class="skill-tag">GCP</span><span class="skill-tag">PostgreSQL</span><span class="skill-tag">TACC Vista (GH200)</span><span class="skill-tag">Docker</span><span class="skill-tag">Cloud Run</span><span class="skill-tag">AWS</span><span class="skill-tag">PySpark</span>
+            </div>
+            <div>
+              <strong>Languages:</strong>
+              <span class="skill-tag">Python</span><span class="skill-tag">C/C++</span><span class="skill-tag">JavaScript</span><span class="skill-tag">HTML</span><span class="skill-tag">CSS</span><span class="skill-tag">SQL</span>
+            </div>
+          </section>
+
+          <section class="cv-section cv-achievements">
+            <h3>Achievements</h3>
+            <ul>
+                <li>Invited reviewer, FAGEN Workshop at ICML 2026</li>
+                <li>First-author oral presentation at ICLR 2026 (ML4RS Workshop)</li>
+                <li>First-author paper accepted at ACL 2026 (C3NLP Workshop)</li>
+                <li>Co-author, npj Ocean Sustainability (Nature Portfolio), accepted March 2026</li>
+                <li>Amazon ML Summer School 2023, selected from 25,000+ applicants</li>
+                <li>University Top Ranker: 1st in Year 1, 2nd in Year 3, Kurukshetra University</li>
+                <li>District 2nd Rank, Panipat, AISSCE 2018</li>
+                <li>7 consecutive Gold Medal Merit Scholarships</li>
+                <li>LeetCode 3-star (Rating 1596) · CodeChef 3-star (Rating 1719)</li>
+            </ul>
+          </section>
+        </div>
+      </div>
+
+      <!-- ══ CONTACT ══ -->
+      <div class="page" id="page-contact">
+        <h2 class="page-heading">Contact</h2>
+        <p class="page-subheading">Open to research collaborations, technical discussions, and Senior AI / Applied Scientist roles.</p>
+        <div class="contact-grid" style="margin-top: 24px;">
+          <div class="contact-row">
+            <svg style="width: 18px; height: 18px; color: var(--text-muted); flex-shrink: 0; display: inline-block;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></svg>
+            <a href="mailto:prabhjotchugh0805@gmail.com">prabhjotchugh0805@gmail.com</a>
+          </div>
+          <div class="contact-row">
+            <svg style="width: 18px; height: 18px; color: var(--text-muted); flex-shrink: 0; display: inline-block;" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+            <a href="https://github.com/prabhjotschugh" target="_blank" rel="noopener">github.com/prabhjotschugh</a>
+          </div>
+          <div class="contact-row">
+            <svg style="width: 18px; height: 18px; color: var(--text-muted); flex-shrink: 0; display: inline-block;" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            <a href="https://linkedin.com/in/prabhjot-singh-chugh" target="_blank" rel="noopener">linkedin.com/in/prabhjot-singh-chugh</a>
+          </div>
+          <div class="contact-row">
+            <svg style="width: 18px; height: 18px; color: var(--text-muted); flex-shrink: 0; display: inline-block;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 1 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>Panipat, Haryana, India (Remote)</span>
+          </div>
+        </div>
+        <div class="contact-form-note">
+          The best way to reach me is via email or LinkedIn. I am particularly open to collaborations around <strong>NLP</strong>, <strong>vision-language models</strong>, <strong>multi-agent systems</strong>, <strong>physics-informed ML</strong>, and <strong>trustworthy AI</strong>. On the industry side, I am actively looking for remote, USD-compensated roles where I can contribute to production-grade AI systems that solve real, high-stakes problems.
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+  <button class="mobile-contact-fab" id="mobileContactBtn">Contact</button>
+
+  <footer>
+    <span>© 2026 · Designed with &#10084; by <b><a href="https://www.linkedin.com/in/prabhjot-singh-chugh/">Prabhjot Singh</a></b></span>
+  </footer>
+
+  <script src="script.js"></script>
+
 </body>
-
 </html>

@@ -1,0 +1,117 @@
+﻿[
+  {
+    "category": "Published & Accepted",
+    "items": [
+      {
+        "index": 1,
+        "title": "When Less Is More: Simplicity Beats Complexity for Physics-Constrained InSAR Phase Unwrapping",
+        "authors": "Prabhjot Singh, Manmeet Singh",
+        "venue": "ML4RS Workshop @ ICLR 2026 | Oral Presentation ⭐",
+        "description": "This research challenges the trend of using high-complexity architectures for geophysical tasks, demonstrating that a vanilla U-Net outperforms larger attention-based models by 34% in R² and 51% in RMSE. By achieving a 2.5x speedup (2.92ms latency), the work provides a physics-grounded solution that preserves the smoothness of surface deformation while meeting sub-100ms requirements for operational early-warning systems.",
+        "image": "Images/inSAR.png",
+        "tags": ["InSAR", "Phase Unwrapping", "Remote Sensing"],
+        "links": {
+          "arxiv": "https://arxiv.org/abs/2605.00896",
+          "openreview": "https://openreview.net/forum?id=liJldeR5ZX",
+          "github": "https://github.com/prabhjotschugh/When-Less-is-More-InSAR-Phase-Unwrapping"
+        }
+      },
+      {
+        "index": 2,
+        "title": "Beyond 'One Language, One Script': Quantifying Orthographic Bias in Multilingual VLMs with PuMVR",
+        "authors": "Prabhjot Singh, Bhushan Pawar, Madhu Reddiboina",
+        "venue": "C3NLP Workshop @ ACL 2026",
+        "description": "This research introduces PuMVR, the first benchmark designed to quantify script-dependent bias in Vision-Language Models (VLMs) across Punjabi’s three active scripts. By exposing a significant \"Script Gap\" and reasoning divergence, the work challenges the prevailing \"One Language, One Script\" paradigm and establishes a new framework for orthographic equity. It provides a critical methodology for ensuring AI systems serve over a billion multi-script language users with consistent reliability and fidelity.",
+        "image": ["Images/PuMVR1.jpg", "Images/PuMVR2.jpg"],
+        "tags": ["VLM Benchmarking", "Multilingual NLP", "Multimodal Reasoning"],
+        "links": {
+          "openreview": "https://openreview.net/forum?id=9kywe2sXGX",
+          "github": "https://github.com/prabhjotschugh/PuMVR-benchmark-for-VLMs",
+          "huggingface": "https://huggingface.co/datasets/Prabhjotschugh/PuMVR-Dataset"
+        }
+      },
+      {
+        "index": 3,
+        "title": "Trustworthy AI for the Ocean: Bridging the Science-Policy Divide",
+        "authors": "Arjun Pankajakshan, Joi Danielson, Zifu Wang, Prabhjot Singh, et al.",
+        "venue": "npj Ocean Sustainability (Nature Portfolio) | Accepted March 2026",
+        "description": "Developed IPOSGPT, a domain-specific Large Language Model (LLM) grounded in a curated corpus of over 800,000 ocean science and policy documents to provide decision-makers with verifiable, rapid insights. By implementing a hierarchical Retrieval-Augmented Generation (RAG) architecture, the system achieved a 0% citation hallucination rate, significantly outperforming generalist models in evidence traceability and scientific grounding. The framework was successfully piloted with the Government of Seychelles, accelerating the assessment of circular economy strategies to combat marine plastic pollution.",
+        "image": ["Images/ipos1.jpg", "Images/ipos2.jpeg"],
+        "tags": ["Ocean AI", "Reliable RAG", "Domain LLM", "Policy Tech"],
+        "links": {
+          "github": "https://github.com/RediMindsResearch/IPOSGPT-Publication",
+          "website": "https://ipos.earth/iposgpt"
+        }
+      },
+      {
+        "index": 4,
+        "title": "Genius AI SaaS: A Unified Multi-Modal Content Generation Platform",
+        "authors": "Prabhjot Singh, Srishti Sharma, Arjun Pankajakshan",
+        "venue": "Springer Nature LNSS | Accepted October 2025",
+        "description": "Genius AI is a unified SaaS platform that integrates text, code, image, video, and music generation into a single, seamless web application. By orchestrating advanced AI models through a user-centric interface, it eliminates workflow fragmentation and empowers non-technical creators to significantly accelerate high-quality multimedia production.",
+        "image": "Images/genius_ai.png",
+        "tags": ["Multi-modal AI", "Generative SaaS", "User-Centric Design"],
+        "links": {
+          "github": "https://github.com/prabhjotschugh/Genius-AI-SaaS"
+        }
+      }
+    ]
+  },
+  {
+    "category": "Under Review",
+    "items": [
+      {
+        "index": 1,
+        "title": "FirstPass: Grounding AI Scientific Judgment in Multi-Round Editorial Outcomes",
+        "authors": "Prabhjot Singh, Somnath Luitel, Manmeet Singh, Josh Durkee",
+        "venue": "AI4Science Workshop @ ICML 2026 (Under Review)",
+        "description": "FirstPass is a novel AI system trained on 3,668 multi-round scientific dialogues to predict real-world editorial outcomes across five disciplines with 80.5% accuracy. By simulating expert critique before submission, it acts as an anticipatory co-author that identifies methodological weaknesses and reduces revision cycles. This work establishes response-only loss masking as a critical prerequisite for exercising genuine scientific judgment in long-context models.",
+        "image": "Images/firstpass.png",
+        "tags": ["Scientific AI", "Dialogue Systems", "AI Co-author"],
+        "links": {}
+      },
+      {
+        "index": 2,
+        "title": "The Hallucination Snowball: Modeling Error Propagation as State Transitions in Multi-Agent LLM Pipelines",
+        "authors": "Prabhjot Singh, Bhushan Pawar",
+        "venue": "Failure Modes in Agentic AI Workshop @ ICML 2026 (Under Review)",
+        "description": "This paper formalizes the hallucination snowball effect, demonstrating how errors in multi-agent LLM pipelines transform from checkable facts into unrecoverable narratives. By modeling this propagation as a first-order Markov process, the research proves that implementing boundary gates at agent handoffs reduces hallucination survival from 58.4% to 16.2%. This work provides the first mathematical framework for propagation control, offering a scalable strategy to ensure reliability in high-stakes, sequential AI architectures.",
+        "image": ["Images/hallucination_snowball1.jpg", "Images/hallucination_snowball2.jpg"],
+        "tags": ["Multi-Agent LLMs", "Markov Modeling", "AI Reliability"],
+        "links": {}
+      }
+    ]
+  },
+  {
+    "category": "Work in Progress",
+    "items": [
+      {
+        "index": 1,
+        "title": "NarrativeShield: A Multi-Agent Clinical Diagnostic Framework for SDoH-Induced Narrative Anchoring Bias",
+        "authors": "Prabhjot Singh",
+        "venue": "Work in Progress | Targeting EACL 2027",
+        "description": "Developed NarrativeShield, an architectural framework designed to mitigate Narrative Anchoring - a hidden bias where LLMs alter diagnoses based on a patient's sociolinguistic style rather than clinical facts. By decoupling clinical data from narrative framing via a multi-agent inference pipeline, the system ensures diagnostic equity across diverse socioeconomic and cultural registers without requiring model fine-tuning. This work introduces a novel 3,000-encounter dataset and demonstrates that structural separation is essential for reliable, equitable clinical AI.",
+        "tags": ["Narrative Anchoring", "LLM Bias", "Multi-Agent"],
+        "links": {}
+      },
+      {
+        "index": 2,
+        "title": "Culturally-Aware, Evidence-Grounded Explainable AI for Health Information",
+        "authors": "Prabhjot Singh, Pritam Deka",
+        "venue": "Work in Progress | Targeting AAAI 2027",
+        "description": "Developed CARE-XAI, a first-of-its-kind multimodal framework that verifies medical claims against peer-reviewed literature while adapting explanations to diverse cultural contexts. By integrating GRADE evidence-quality scoring and a novel Cultural Health Context Encoder, this work directly mitigates AI-generated health misinformation and bridges critical gaps in global health equity and patient trust.",
+        "tags": ["Multimodal XAI", "Evidence Grounding", "Cultural Sensitivity"],
+        "links": {}
+      },
+      {
+        "index": 3,
+        "title": "NLI Debiasing Study: Comparing 11 Strategies Across ELECTRA and RoBERTa",
+        "authors": "Prabhjot Singh",
+        "venue": "Work in Progress | Targeting Workshop on Insights from Negative Results in NLP @ EMNLP 2026",
+        "description": "Conducted 44 controlled experiments revealing that NLI debiasing methods often fail to generalize across different architectures and datasets, with many gains being statistically indistinguishable from noise. I identified model capacity as a critical bottleneck, proving that smaller models like ELECTRA-small lack the representational power to utilize debiasing signals. This work advocates for a new standard of rigor in NLP, requiring multi-architecture evaluation and confidence intervals to distinguish true algorithmic progress from architectural artifacts.",
+        "tags": ["Model Robustness", "Algorithmic Bias", "Natural Language Inference"],
+        "links": {}
+      }
+    ]
+  }
+]
