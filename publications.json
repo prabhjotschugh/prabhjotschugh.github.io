@@ -88,7 +88,7 @@
       {
         "index": 1,
         "title": "NarrativeShield: A Multi-Agent Clinical Diagnostic Framework for SDoH-Induced Narrative Anchoring Bias",
-        "authors": "Prabhjot Singh",
+        "authors": "Prabhjot Singh, Manmeet Singh",
         "venue": "Work in Progress | Targeting EACL 2027",
         "description": "Developed NarrativeShield, an architectural framework designed to mitigate Narrative Anchoring - a hidden bias where LLMs alter diagnoses based on a patient's sociolinguistic style rather than clinical facts. By decoupling clinical data from narrative framing via a multi-agent inference pipeline, the system ensures diagnostic equity across diverse socioeconomic and cultural registers without requiring model fine-tuning. This work introduces a novel 3,000-encounter dataset and demonstrates that structural separation is essential for reliable, equitable clinical AI.",
         "tags": ["Narrative Anchoring", "LLM Bias", "Multi-Agent"],
