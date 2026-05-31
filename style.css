@@ -238,7 +238,7 @@ body {
 }
 .news-item { display: flex; gap: 16px; margin-bottom: 16px; font-size: 0.9rem; }
 .news-item:last-child { margin-bottom: 0; }
-.news-date { font-weight: 700; color: var(--link); white-space: nowrap; min-width: 80px; }
+.news-date { font-weight: 700; color: var(--link); white-space: nowrap; min-width: 90px; }
 .news-text { color: var(--text-secondary); line-height: 1.5; }
 
 /* ── Item Cards (Pubs & Projects) ── */
