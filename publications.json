@@ -25,6 +25,8 @@
         "image": "Images/firstpass.png",
         "tags": ["Scientific AI", "Dialogue Systems", "AI Co-author"],
         "links": {
+          "openreview": "https://openreview.net/forum?id=F6BxPrmBef",
+          "openreview_dataset": "https://openreview.net/forum?id=ywc9PW9Ykz",
           "github": "https://github.com/prabhjotschugh/firstpass-peer-review",
           "huggingface": "https://huggingface.co/datasets/Prabhjotschugh/firstpass-peer-review"
         }
@@ -38,6 +40,7 @@
         "image": ["Images/hallucination_snowball1.jpg", "Images/hallucination_snowball2.jpg"],
         "tags": ["Multi-Agent LLMs", "Markov Modeling", "AI Reliability"],
         "links": {
+          "openreview": "https://openreview.net/forum?id=YOPVjUoijs",
           "github": "https://github.com/prabhjotschugh/hallucination-snowball"
         }
       },
