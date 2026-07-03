@@ -25,6 +25,7 @@
         "image": "Images/firstpass.png",
         "tags": ["Scientific AI", "Dialogue Systems", "AI Co-author"],
         "links": {
+          "arxiv": "https://arxiv.org/abs/2606.20769",
           "openreview": "https://openreview.net/forum?id=F6BxPrmBef",
           "openreview_dataset": "https://openreview.net/forum?id=ywc9PW9Ykz",
           "github": "https://github.com/prabhjotschugh/firstpass-peer-review",
@@ -53,6 +54,7 @@
         "image": ["Images/PuMVR1.jpg", "Images/PuMVR2.jpg"],
         "tags": ["VLM Benchmarking", "Multilingual NLP", "Multimodal Reasoning"],
         "links": {
+          "arxiv": "https://arxiv.org/abs/2606.20770",
           "openreview": "https://openreview.net/forum?id=9kywe2sXGX",
           "github": "https://github.com/prabhjotschugh/PuMVR-benchmark-for-VLMs",
           "huggingface": "https://huggingface.co/datasets/Prabhjotschugh/PuMVR-Dataset"
@@ -66,7 +68,8 @@
         "description": "Developed IPOSGPT, a domain-specific Large Language Model (LLM) grounded in a curated corpus of over 800,000 ocean science and policy documents to provide decision-makers with verifiable, rapid insights. By implementing a hierarchical Retrieval-Augmented Generation (RAG) architecture, the system achieved a 0% citation hallucination rate, significantly outperforming generalist models in evidence traceability and scientific grounding. The framework was successfully piloted with the Government of Seychelles, accelerating the assessment of circular economy strategies to combat marine plastic pollution.",
         "image": ["Images/ipos1.jpg", "Images/ipos2.jpeg"],
         "tags": ["Ocean AI", "Reliable RAG", "Domain LLM", "Policy Tech"],
-        "links": {
+        "links": {    
+          "paper" :"https://www.nature.com/articles/s44183-026-00195-0",
           "github": "https://github.com/RediMindsResearch/IPOSGPT-Publication",
           "website": "https://ipos.earth/iposgpt"
         }
