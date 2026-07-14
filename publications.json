@@ -62,6 +62,18 @@
       },
       {
         "index": 5,
+        "title": "The Architecture Was Doing the Work: Why NLI Debiasing Results Do Not Generalise",
+        "authors": "Prabhjot Singh",
+        "venue": "Workshop on Insights from Negative Results in NLP @ EMNLP 2026",
+        "description": "Conducted 44 controlled experiments revealing that NLI debiasing methods often fail to generalize across different architectures and datasets, with many gains being statistically indistinguishable from noise. I identified model capacity as a critical bottleneck, proving that smaller models like ELECTRA-small lack the representational power to utilize debiasing signals. This work advocates for a new standard of rigor in NLP, requiring multi-architecture evaluation and confidence intervals to distinguish true algorithmic progress from architectural artifacts.",
+        "image": "Images/nli_insights.png",
+        "tags": ["Model Robustness", "Algorithmic Bias", "Natural Language Inference"],
+        "links": {
+          "github": "https://github.com/prabhjotschugh/nli-debiasing-generalisation-study"
+        }
+      },
+      {
+        "index": 6,
         "title": "Trustworthy AI for the Ocean: Bridging the Science-Policy Divide",
         "authors": "Arjun Pankajakshan, Joi Danielson, Zifu Wang, Prabhjot Singh, et al.",
         "venue": "npj Ocean Sustainability (Nature Portfolio) | Accepted March 2026",
@@ -75,7 +87,7 @@
         }
       },
       {
-        "index": 6,
+        "index": 7,
         "title": "Genius AI SaaS: A Unified Multi-Modal Content Generation Platform",
         "authors": "Prabhjot Singh, Srishti Sharma, Arjun Pankajakshan",
         "venue": "Springer Nature LNSS | Accepted October 2025",
@@ -89,29 +101,12 @@
     ]
   },
   {
-    "category": "Under Review",
-    "items": [
-      {
-        "index": 1,
-        "title": "The Architecture Was Doing the Work: Why NLI Debiasing Results Do Not Generalise",
-        "authors": "Prabhjot Singh",
-        "venue": "Workshop on Insights from Negative Results in NLP @ EMNLP 2026 (Under Review)",
-        "description": "Conducted 44 controlled experiments revealing that NLI debiasing methods often fail to generalize across different architectures and datasets, with many gains being statistically indistinguishable from noise. I identified model capacity as a critical bottleneck, proving that smaller models like ELECTRA-small lack the representational power to utilize debiasing signals. This work advocates for a new standard of rigor in NLP, requiring multi-architecture evaluation and confidence intervals to distinguish true algorithmic progress from architectural artifacts.",
-        "image": "Images/nli_insights.png",
-        "tags": ["Model Robustness", "Algorithmic Bias", "Natural Language Inference"],
-        "links": {
-          "github": "https://github.com/prabhjotschugh/nli-debiasing-generalisation-study"
-        }
-      }
-    ]
-  },
-  {
     "category": "Work in Progress",
     "items": [
       {
         "index": 1,
         "title": "NarrativeShield: A Multi-Agent Clinical Diagnostic Framework for SDoH-Induced Narrative Anchoring Bias",
-        "authors": "Prabhjot Singh, Manmeet Singh",
+        "authors": "Prabhjot Singh, Pritam Deka",
         "venue": "Work in Progress | Targeting EACL 2027",
         "description": "Developed NarrativeShield, an architectural framework designed to mitigate Narrative Anchoring - a hidden bias where LLMs alter diagnoses based on a patient's sociolinguistic style rather than clinical facts. By decoupling clinical data from narrative framing via a multi-agent inference pipeline, the system ensures diagnostic equity across diverse socioeconomic and cultural registers without requiring model fine-tuning. This work introduces a novel 3,000-encounter dataset and demonstrates that structural separation is essential for reliable, equitable clinical AI.",
         "tags": ["Narrative Anchoring", "LLM Bias", "Multi-Agent"],
@@ -121,7 +116,7 @@
         "index": 2,
         "title": "Culturally-Aware, Evidence-Grounded Explainable AI for Health Information",
         "authors": "Prabhjot Singh, Pritam Deka",
-        "venue": "Work in Progress | Targeting AAAI 2027",
+        "venue": "Work in Progress | Targeting EACL 2027",
         "description": "Developed CARE-XAI, a first-of-its-kind multimodal framework that verifies medical claims against peer-reviewed literature while adapting explanations to diverse cultural contexts. By integrating GRADE evidence-quality scoring and a novel Cultural Health Context Encoder, this work directly mitigates AI-generated health misinformation and bridges critical gaps in global health equity and patient trust.",
         "tags": ["Multimodal XAI", "Evidence Grounding", "Cultural Sensitivity"],
         "links": {}
