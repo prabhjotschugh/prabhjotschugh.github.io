@@ -4,6 +4,14 @@
     "items": [
       {
         "index": 1,
+        "title": "NarrativeShield: Mitigating Narrative Anchoring in Clinical Language Models",
+        "description": "Built NarrativeShield-SDoH, a dataset of 1,000 USMLE clinical vignettes rewritten into three sociolinguistically distinct personas under an independently audited fact-preservation guarantee, to isolate Narrative Anchoring - a bias where LLMs shift diagnoses based on a patient's register rather than clinical facts. Designed NarrativeShield, a three-agent pipeline that structurally extracts and verifies clinical facts before diagnostic reasoning, reducing the Narrative Anchoring Gap to near-zero across seven evaluated models on TACC GH200 infrastructure.",
+        "image": ["Images/narrativeshield1.png", "Images/narrativeshield2.jpg"],
+        "tags": ["Narrative Anchoring", "Clinical NLP", "Multi-Agent"],
+        "links": {}
+      },
+      {
+        "index": 2,
         "title": "The Hallucination Snowball: Modeling Error Propagation as State Transitions in Multi-Agent LLM Pipelines",
         "description": "This paper formalizes the hallucination snowball effect, demonstrating how errors in multi-agent LLM pipelines transform from checkable facts into unrecoverable narratives. By modeling this propagation as a first-order Markov process, the research proves that implementing boundary gates at agent handoffs reduces hallucination survival from 58.4% to 16.2%. This work provides the first mathematical framework for propagation control, offering a scalable strategy to ensure reliability in high-stakes, sequential AI architectures.",
         "image": ["Images/hallucination_snowball1.jpg", "Images/hallucination_snowball2.jpg"],
@@ -12,7 +20,7 @@
       }
       ,
       {
-        "index": 2,
+        "index": 3,
         "title": "PuMVR: Punjabi Multimodal Visual Reasoning Benchmark",
         "description": "Engineered PuMVR, a first-of-its-kind multimodal benchmark for quantifying orthographic bias in VLMs across Gurmukhi, Shahmukhi, and Roman scripts. I developed automated evaluation pipelines to audit 10 state-of-the-art models on NVIDIA GH200 infrastructure and architected the Script Consistency Rate (SCR) metric to rigorously measure cross-script reasoning robustness.",
         "image": ["Images/PuMVR1.jpg", "Images/PuMVR2.jpg"],

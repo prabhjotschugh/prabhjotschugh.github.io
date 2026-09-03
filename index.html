@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Prabhjot Singh</title>
-  <meta name="description" content="MS AI student at UT Austin (GPA 4.0) and AI Engineer at RediMinds Inc. First-author papers at ICLR 2026, ACL 2026, ICML 2026, and Springer Nature." />
+  <meta name="description" content="MS AI student at UT Austin (GPA 4.0) and AI Research Scientist at Lexsi Labs. First-author papers at EMNLP Findings 2026, ICLR 2026, ACL 2026, ICML 2026, and Springer Nature." />
   <link rel="icon" type="image/png" href="Images/favicon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -109,7 +109,7 @@
     </div>
 
       <h1 class="profile-name">Prabhjot Singh</h1>
-      <p class="profile-role">MS Student &amp; AI Engineer</p>
+      <p class="profile-role">MS Student &amp; AI Research Scientist</p>
 
       <hr class="profile-divider" />
 
@@ -165,19 +165,35 @@
         <h2 class="about-heading">About Me</h2>
         <div class="bio">
           <p>
-            I am an <strong>MS student in Artificial Intelligence</strong> at the <strong>University of Texas at Austin</strong> (GPA 4.0) and a full-time <strong>AI Engineer at RediMinds Inc.</strong>
+            I am an <strong>MS student in Artificial Intelligence</strong> at the <strong>University of Texas at Austin</strong> (GPA 4.0) and a full-time <strong>AI Research Scientist at Lexsi Labs</strong>
           </p>
           <p>
             I build for domains where failure is not an option. My systems are in production today: domain-specific RAG pipelines at massive scale helping governments make ocean policy decisions and giving doctors clinically grounded evidence for insurance reviews, multi-agent architectures automating enterprise workflows, and physics-informed models extracting deformation signals from satellite radar to help prevent geophysical disasters.
           </p>
           <p>
-            I approach research with the mindset of an engineer: if it does not work in production, it does not count. My work spans <strong>AI for Science</strong>, <strong>Trustworthy AI</strong>, <strong>Multi-Agent Systems</strong>, <strong>Physics-Informed ML</strong>, and <strong>Multimodal NLP</strong>, co-authored work published in <strong>npj Ocean Sustainability</strong> (Nature Portfolio), presented as an oral at the ML4RS Workshop at <strong>ICLR 2026</strong>, and accepted at the C3NLP Workshop at <strong>ACL 2026</strong>, and the AI4Science and FAGEN Workshops at <strong>ICML 2026</strong>.
+            I approach research with the mindset of an engineer: if it does not work in production, it does not count. My work spans <strong>AI for Science</strong>, <strong>Trustworthy AI</strong>, <strong>Multi-Agent Systems</strong>, <strong>Physics-Informed ML</strong>, and <strong>Multimodal NLP</strong>, including a paper accepted to the <strong>Findings of EMNLP 2026</strong>, co-authored work published in <strong>npj Ocean Sustainability</strong> (Nature Portfolio), presented as an oral at the ML4RS Workshop at <strong>ICLR 2026</strong>, and accepted at the C3NLP Workshop at <strong>ACL 2026</strong>, and the AI4Science and FAGEN Workshops at <strong>ICML 2026</strong>.
           </p>
             <p style="font-size: 1rem; letter-spacing: 0.02em; margin-top: 24px; font-style: italic;"><strong style="font-weight: 700;">Researcher. Engineer. Founder in progress.</strong></p>
         </div>
 
         <h2 class="page-heading" style="margin-top: 48px;">Latest News</h2>
         <div class="news-list">
+          <div class="news-item">
+            <span class="news-date">25 Aug 2026</span>
+            <span class="news-text">Invited to serve as a reviewer for the <strong>Verify-Agents Workshop @ NeurIPS 2026</strong>.</span>
+          </div>
+          <div class="news-item">
+            <span class="news-date">21 Aug 2026</span>
+            <span class="news-text">Paper "Not Truly Multilingual" accepted at <strong>EMNLP Findings 2026</strong>.</span>
+          </div>
+          <div class="news-item">
+            <span class="news-date">14 Aug 2026</span>
+            <span class="news-text">Invited to serve as a reviewer for the <strong>AI-Native Academia Workshop @ NeurIPS 2026</strong>.</span>
+          </div>
+          <div class="news-item">
+            <span class="news-date">1 Aug 2026</span>
+            <span class="news-text">Joined <strong>Lexsi Labs</strong> as an AI Research Scientist.</span>
+          </div>
           <div class="news-item">
             <span class="news-date">30 Jul 2026</span>
             <span class="news-text">Invited to serve as a reviewer at the <strong>NewInML Workshop @ NeurIPS 2026</strong>.</span>
@@ -309,8 +325,26 @@
           <section class="cv-section">
             <h3>Work Experience</h3>
             <div class="cv-item">
+              <div class="cv-item">
+                <h4>AI Research Scientist · Lexsi Labs</h4>
+                <p class="cv-item-meta">Aug 2026 – Present · Remote (London, UK-based)</p>
+
+                <h5>Mason - Terminal-Based Coding Agent</h5>
+                <ul>
+                  <li>Engineered the HTTP-based Model Context Protocol (MCP) integration in the Python FastAPI backend, enabling dynamic per-user tool registration and execution.</li>
+                  <li>Designed and applied PostgreSQL database migrations to support per-user MCP tools, persistent session state, and interaction history without degrading query latency.</li>
+                  <li>Developed a high-precision lexical matching retrieval algorithm for MCP tool schemas that achieved a 92% token reduction (45k to 3.5k tokens per turn), cut tool-routing latency to ~1ms, and delivered 100% retrieval accuracy on literal queries.</li>
+                  <li>Resolved distributed state synchronization failures across 4 load-balanced backend replicas during MCP OAuth handshakes and patched a PKCE security vulnerability in browser parameters.</li>
+                  <li>Architected and deployed the "Lessons" memory subsystem featuring mistake-class validation, append-only logs, and recurrence counters to eliminate agentic execution loops.</li>
+                  <li>Served as primary technical reviewer across the backend Python and frontend Go TUI repositories, reviewing 79 pull requests in a single high-velocity release sprint.</li>
+                </ul>
+
+                <div class="tech-stack-list">
+                  <span class="tech-stack-item">Python</span><span class="tech-stack-item">FastAPI</span><span class="tech-stack-item">Go</span><span class="tech-stack-item">PostgreSQL</span><span class="tech-stack-item">Model Context Protocol</span><span class="tech-stack-item">OAuth / PKCE</span><span class="tech-stack-item">SWE-Bench</span>
+                </div>
+              </div>             
               <h4>AI Engineer · RediMinds Inc.</h4>
-              <p class="cv-item-meta">May 2024 – Present · Remote (USA-based)</p>
+              <p class="cv-item-meta">May 2024 – Jul 2026 · Remote (USA-based)</p>
               
               <h5>IPOS Ocean GPT - Ocean Policy RAG System (npj Ocean Sustainability, Nature Portfolio)</h5>
               <ul>
@@ -337,6 +371,16 @@
                   <li>Conducted field-level credentialing mapping across all 50 US states and delivered a structured comparative report to the team.</li>
                   <li>Built end-to-end license and sanctions check pipelines for 28 states, covering NPI API integration, state website scraping with reCAPTCHA handling, license number normalization, and automated credential verification.</li>
                   <li>Integrated OIG-LEIE federal sanctions checks and standardized all outputs into a unified schema for automated report generation in PDF and markdown.</li>
+              </ul>
+
+              <h5>IRO Prior Auth (AI) - Automated Prior Authorization Review</h5>
+              <ul>
+                  <li>Led technical strategy for a new AI-driven prior authorization project aligned to the CMS-0057-F federal mandate, authoring the team's strategy document on reducing physician workload via AI-assisted review.</li>
+                  <li>Designed the v1 API architecture and evaluated MCP tools, skills, and connectors within the Claude ecosystem to build the review pipeline.</li>
+                  <li>Engineered a custom CLAUDE.md configuration to override default skill behavior after diagnosing that generic prompting caused discrepancies against ground-truth clinical results, achieving high concordance with expected outcomes on retesting.</li>
+                  <li>Designed and ran a 4-environment controlled experiment (full document vs. summary input, guideline inclusion vs. exclusion, custom prompting active vs. inactive) across prior authorization test cases, validated against clinical stakeholders.</li>
+                  <li>Built a high-speed OCR ingestion pipeline (Gemini-based) to convert large PDF inputs into standardized text for the pipeline.</li>
+                  <li>Designed and deployed a Streamlit demonstration interface for client-facing use and delivered final stakeholder walkthroughs ahead of departure.</li>
               </ul>
 
               <h5>Salish Sea Digital Twin - Marine Habitat Simulation</h5>
@@ -391,8 +435,11 @@
           <section class="cv-section cv-achievements">
             <h3>Achievements</h3>
             <ul>
+                <li>Invited reviewer, Verify-Agents Workshop at NeurIPS 2026</li>
+                <li>Invited reviewer, AI-Native Academia Workshop at NeurIPS 2026</li>
                 <li>Invited reviewer, NewInML Workshop at NeurIPS 2026</li>
                 <li>Invited reviewer, FAGEN Workshop at ICML 2026</li>
+                <li>First-author paper accepted to the Findings of EMNLP 2026</li>
                 <li>First-author paper accepted at ICML 2026 (FAGEN Workshop)</li>
                 <li>First-author paper accepted to both Research and Dataset Competition tracks, ICML 2026 (AI4Science Workshop)</li>
                 <li>First-author oral presentation at ICLR 2026 (ML4RS Workshop)</li>

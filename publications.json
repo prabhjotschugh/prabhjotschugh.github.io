@@ -4,6 +4,21 @@
     "items": [
       {
         "index": 1,
+        "title": "Not Truly Multilingual: Script Consistency as a Missing Dimension in VLM Evaluation",
+        "authors": "Prabhjot Singh, Bhushan Pawar, Madhu Reddiboina, Rajvee Sheth",
+        "venue": "EMNLP Findings 2026",
+        "description": "This work exposes a critical blind spot in multilingual VLM evaluation: the 'One Language, One Script' assumption that overlooks billions of multi-script language users. Introducing PuMVR, a 1,000-instance benchmark spanning Punjabi's three active scripts (Gurmukhi, Shahmukhi, and Roman), we evaluate 10 state-of-the-art VLMs and uncover a systematic Script Gap, with accuracy deltas reaching 16% and Script Consistency Rate (SCR) falling as low as 24.8% on identical semantic content. Visual grounding boosts performance uniformly but never closes the gap, and cross-script in-context transfer proves highly brittle, exposing script-locked knowledge representations even in frontier models. Validated by McNemar tests across all script pairs, this study establishes SCR as a mandatory metric for script-agnostic evaluation and equitable multilingual AI.",
+        "image": ["Images/PuMVR1.jpg", "Images/PuMVR2.jpg"],
+        "tags": ["VLM Benchmarking", "Multilingual NLP", "Multimodal Reasoning"],
+        "links": {
+          "arxiv": "https://arxiv.org/abs/2606.17188",
+          "openreview": "https://openreview.net/forum?id=MFqUM2EQQm",
+          "github": "https://github.com/prabhjotschugh/Not-Truly-Multilingual-PuMVR",
+          "huggingface": "https://huggingface.co/datasets/Prabhjotschugh/PuMVR-Dataset"
+        }
+      },
+      {
+        "index": 2,
         "title": "When Less Is More: Simplicity Beats Complexity for Physics-Constrained InSAR Phase Unwrapping",
         "authors": "Prabhjot Singh, Manmeet Singh",
         "venue": "ML4RS Workshop @ ICLR 2026 | Oral Presentation ⭐",
@@ -17,7 +32,7 @@
         }
       },
       {
-        "index": 2,
+        "index": 3,
         "title": "FirstPass: Grounding AI Scientific Judgment in Multi-Round Editorial Outcomes",
         "authors": "Prabhjot Singh, Somnath Luitel, Manmeet Singh, Josh Durkee",
         "venue": "AI4Science Workshop @ ICML 2026 (Dual Acceptance: Research Track & Dataset Competition Track)",
@@ -33,7 +48,7 @@
         }
       },
       {
-        "index": 3,
+        "index": 4,
         "title": "The Hallucination Snowball: Modeling Error Propagation as State Transitions in Multi-Agent LLM Pipelines",
         "authors": "Prabhjot Singh, Bhushan Pawar",
         "venue" : "Failure Modes in Agentic AI Workshop @ ICML 2026",
@@ -41,12 +56,13 @@
         "image": ["Images/hallucination_snowball1.jpg", "Images/hallucination_snowball2.jpg"],
         "tags": ["Multi-Agent LLMs", "Markov Modeling", "AI Reliability"],
         "links": {
+          "arxiv": "https://arxiv.org/abs/2608.14588",
           "openreview": "https://openreview.net/forum?id=YOPVjUoijs",
           "github": "https://github.com/prabhjotschugh/hallucination-snowball"
         }
       },
       {
-        "index": 4,
+        "index": 5,
         "title": "Beyond 'One Language, One Script': Quantifying Orthographic Bias in Multilingual VLMs with PuMVR",
         "authors": "Prabhjot Singh, Bhushan Pawar, Madhu Reddiboina",
         "venue": "C3NLP Workshop @ ACL 2026",
@@ -61,33 +77,33 @@
         }
       },
       {
-        "index": 5,
+        "index": 6,
         "title": "The Architecture Was Doing the Work: Why NLI Debiasing Results Do Not Generalise",
         "authors": "Prabhjot Singh",
         "venue": "Workshop on Insights from Negative Results in NLP @ EMNLP 2026",
-        "description": "Conducted 44 controlled experiments revealing that NLI debiasing methods often fail to generalize across different architectures and datasets, with many gains being statistically indistinguishable from noise. I identified model capacity as a critical bottleneck, proving that smaller models like ELECTRA-small lack the representational power to utilize debiasing signals. This work advocates for a new standard of rigor in NLP, requiring multi-architecture evaluation and confidence intervals to distinguish true algorithmic progress from architectural artifacts.",
-        "image": "Images/nli_insights.png",
+        "description": "Running 44 controlled experiments across eleven debiasing strategies, two architecturally distinct models, and two corpora, this work shows that NLI debiasing effectiveness is driven almost entirely by architecture rather than method. On ELECTRA-small, every debiasing intervention fails completely, statistically indistinguishable from the baseline on HANS, while the identical codebase produces real, if inconsistent, gains on RoBERTa-base. The paper traces this to a capacity failure rather than a pipeline artifact and further finds that the assumed robustness-accuracy tradeoff inverts on RoBERTa, arguing for cross-architecture validation, confidence intervals, and per-heuristic reporting as non-negotiable standards for future debiasing research.",
+        "image": ["Images/nli_insights.png", "Images/insights.png"],
         "tags": ["Model Robustness", "Algorithmic Bias", "Natural Language Inference"],
         "links": {
           "github": "https://github.com/prabhjotschugh/nli-debiasing-generalisation-study"
         }
       },
       {
-        "index": 6,
+        "index": 7,
         "title": "Trustworthy AI for the Ocean: Bridging the Science-Policy Divide",
         "authors": "Arjun Pankajakshan, Joi Danielson, Zifu Wang, Prabhjot Singh, et al.",
         "venue": "npj Ocean Sustainability (Nature Portfolio) | Accepted March 2026",
         "description": "Developed IPOSGPT, a domain-specific Large Language Model (LLM) grounded in a curated corpus of over 800,000 ocean science and policy documents to provide decision-makers with verifiable, rapid insights. By implementing a hierarchical Retrieval-Augmented Generation (RAG) architecture, the system achieved a 0% citation hallucination rate, significantly outperforming generalist models in evidence traceability and scientific grounding. The framework was successfully piloted with the Government of Seychelles, accelerating the assessment of circular economy strategies to combat marine plastic pollution.",
         "image": ["Images/ipos1.jpg", "Images/ipos2.jpeg"],
         "tags": ["Ocean AI", "Reliable RAG", "Domain LLM", "Policy Tech"],
-        "links": {    
+        "links": {
           "paper" :"https://www.nature.com/articles/s44183-026-00195-0",
           "github": "https://github.com/RediMindsResearch/IPOSGPT-Publication",
           "website": "https://ipos.earth/iposgpt"
         }
       },
       {
-        "index": 7,
+        "index": 8,
         "title": "Genius AI SaaS: A Unified Multi-Modal Content Generation Platform",
         "authors": "Prabhjot Singh, Srishti Sharma, Arjun Pankajakshan",
         "venue": "Springer Nature LNSS | Accepted October 2025",
@@ -101,25 +117,63 @@
     ]
   },
   {
+    "category": "Under Review",
+    "items": [
+      {
+        "index": 1,
+        "title": "Same Facts, Different Diagnosis: Measuring and Mitigating Narrative Anchoring in Clinical Language Models",
+        "authors": "Prabhjot Singh, Pritam Deka, Vijay Chennareddy",
+        "venue": "Under Review | Submitted to EACL 2027",
+        "description": "This work identifies Narrative Anchoring: a bias where clinical language models shift their diagnostic output based on a patient's sociolinguistic register alone, with no demographic marker ever stated. We introduce NarrativeShield-SDoH, a dataset of 1,000 USMLE clinical vignettes rewritten into three register-distinct personas under an independently audited fact-preservation guarantee. Across seven language models, Narrative Anchoring is statistically significant under direct prompting in every model tested, and chain-of-thought or explicit debiasing instructions mitigate it only partially. We propose NarrativeShield, a three-agent pipeline that structurally extracts and verifies clinical facts before diagnostic reasoning begins, reducing the Narrative Anchoring Gap to near-zero and achieving the most stable diagnostic decisions of any method tested, establishing that structural separation of narrative from clinical fact is key to equitable clinical AI.",
+        "image": ["Images/narrativeshield1.png", "Images/narrativeshield2.jpg"],
+        "tags": ["Narrative Anchoring", "Clinical NLP", "Multi-Agent", "AI Fairness"],
+        "links": {
+          "openreview": "https://openreview.net/pdf?id=BgVqVpiBLb",
+          "github": "https://github.com/prabhjotschugh/narrativeshield-sdoh-medqa",
+          "huggingface": "https://huggingface.co/datasets/Prabhjotschugh/narrativeshield-sdoh-medqa",
+          "arxiv": "https://arxiv.org/abs/2607.27384"
+        }
+      },
+      {
+        "index": 2,
+        "title": "Talking a Rejection Into an Accept: How Confidence Framing Fools (Some) LLM Reviewers",
+        "authors": "Prabhjot Singh, Somnath Luitel, Manmeet Singh",
+        "venue": "Under Review | NeurIPS 2026 Workshop on AI-Native Academia: Authorship, Peer Review, and Conference Governance under AI",
+        "description": "This work tests whether AI-generated peer review is uniformly vulnerable to style manipulation or only in specific models, evaluating 9 open-weight reviewer models on 100 real ICLR 2026 and ICML 2026 abstracts rewritten into five controlled confidence tones with every factual claim held fixed. Hedging is punished in all 9 of 9 models, the only effect that replicates without exception, while overclaiming splits models in opposite directions, from severe penalties to significant rewards. Confidence reframing flips a genuine rejection into an accept in up to 35.7% of eligible cases, but only in 2 of 9 models with adequate sample size, while which reviewer model is deployed explains more variance in a paper's score than any style manipulation tested, arguing that model-selection auditing, not blanket AI-reviewer distrust, is the actionable lever for venues already deploying these systems.",
+        "image": ["Images/talking_to_accept_1.jpg", "Images/talking_to_accept_2.jpg"],
+        "tags": ["LLM-as-a-Judge", "Peer Review", "AI Fairness", "NLP"],
+        "links": {
+          "github": "https://github.com/prabhjotschugh/Talking-into-an-accept"
+        }
+      },
+      {
+        "index": 3,
+        "title": "The Trust Gap: LLM Judges Are Consistent, Not Correct",
+        "authors": "Prabhjot Singh, Bhushan Pawar",
+        "venue": "Under Review | NeurIPS 2026 Workshop \"Who Verifies the Agents? Toward Reliable Agent Development\"",
+        "description": "This work audits whether trusting an LLM judge because it agrees with itself is a safe substitute for checking whether it agrees with reality, testing six independently built judges on 200 real coding-agent trajectories validated against executable outcomes. Every one of the six judges is substantially less accurate against ground truth on trajectories whose surface features are atypical for their outcome, with unanimous accuracy drops of 18 to 42 percentage points, while self-consistency across repeated queries on the same trajectories barely moves, holding significantly for only one of six judges. This validity-reliability dissociation shows self-consistency is not a usable proxy for correctness, and a simple disagreement-triggered escalation-to-human-review protocol recovers 84.9% accuracy on the trajectories it accepts, turning the diagnosis into a practical, low-cost mitigation for teams building agent verification pipelines.",
+        "image": ["Images/trust_gap_1.jpg", "Images/trust_gap_2.jpg"],
+        "tags": ["LLM-as-a-Judge", "Agent Evaluation", "AI Reliability", "NLP"],
+        "links": {
+          "github": "https://github.com/prabhjotschugh/llm-judge-trust-gap"
+        }
+      }
+    ]
+  },
+  {
     "category": "Work in Progress",
     "items": [
       {
         "index": 1,
-        "title": "NarrativeShield: A Multi-Agent Clinical Diagnostic Framework for SDoH-Induced Narrative Anchoring Bias",
-        "authors": "Prabhjot Singh, Pritam Deka",
-        "venue": "Work in Progress | Targeting EACL 2027",
-        "description": "Developed NarrativeShield, an architectural framework designed to mitigate Narrative Anchoring - a hidden bias where LLMs alter diagnoses based on a patient's sociolinguistic style rather than clinical facts. By decoupling clinical data from narrative framing via a multi-agent inference pipeline, the system ensures diagnostic equity across diverse socioeconomic and cultural registers without requiring model fine-tuning. This work introduces a novel 3,000-encounter dataset and demonstrates that structural separation is essential for reliable, equitable clinical AI.",
-        "tags": ["Narrative Anchoring", "LLM Bias", "Multi-Agent"],
-        "links": {}
-      },
-      {
-        "index": 2,
-        "title": "Culturally-Aware, Evidence-Grounded Explainable AI for Health Information",
-        "authors": "Prabhjot Singh, Pritam Deka",
-        "venue": "Work in Progress | Targeting EACL 2027",
-        "description": "Developed CARE-XAI, a first-of-its-kind multimodal framework that verifies medical claims against peer-reviewed literature while adapting explanations to diverse cultural contexts. By integrating GRADE evidence-quality scoring and a novel Cultural Health Context Encoder, this work directly mitigates AI-generated health misinformation and bridges critical gaps in global health equity and patient trust.",
-        "tags": ["Multimodal XAI", "Evidence Grounding", "Cultural Sensitivity"],
-        "links": {}
+        "title": "When Retrieval Helps and Distracts: Evaluating Evidence-Generating LLMs for Biomedical Claim Verification",
+        "authors": "Pritam Deka, Prabhjot Singh",
+        "venue": "Work in Progress",
+        "description": "This work presents a systematic evaluation of evidence-generating LLMs for biomedical claim verification on CARE-XAI, a unified benchmark spanning five biomedical and health fact-checking sources. Comparing base LLMs, PubMed retrieval-augmented LLMs, fine-tuned LLMs, and biomedical encoder classifiers under a shared protocol, we find biomedical classifiers remain strongest for verdict-only prediction while fine-tuned LLMs are the strongest evidence-generating systems. We introduce Bio-GRACE, a gold-reference-normalized diagnostic showing that PubMed retrieval helps PubMed-aligned sources like PubMedQA and SciFact but distracts models on broader public-health claims, motivating selective rather than always-on retrieval for biomedical fact-checking.",
+        "tags": ["Biomedical NLP", "Retrieval-Augmented Generation", "Fact Verification"],
+        "links": {
+          "arxiv": "https://arxiv.org/abs/2608.01409",
+          "github": "https://github.com/prabhjotschugh/care-xai"
+        }
       }
     ]
   }
