@@ -21,14 +21,15 @@
         "index": 2,
         "title": "When Less Is More: Simplicity Beats Complexity for Physics-Constrained InSAR Phase Unwrapping",
         "authors": "Prabhjot Singh, Manmeet Singh",
-        "venue": "ML4RS Workshop @ ICLR 2026 | Oral Presentation ⭐",
+        "venue": "IEEE Geoscience and Remote Sensing Letters (Accepted August 2026) & ML4RS Workshop @ ICLR 2026 | Oral Presentation ⭐",
         "description": "This research challenges the trend of using high-complexity architectures for geophysical tasks, demonstrating that a vanilla U-Net outperforms larger attention-based models by 34% in R² and 51% in RMSE. By achieving a 2.5x speedup (2.92ms latency), the work provides a physics-grounded solution that preserves the smoothness of surface deformation while meeting sub-100ms requirements for operational early-warning systems.",
         "image": "Images/inSAR.png",
         "tags": ["InSAR", "Phase Unwrapping", "Remote Sensing"],
         "links": {
           "arxiv": "https://arxiv.org/abs/2605.00896",
           "openreview": "https://openreview.net/forum?id=liJldeR5ZX",
-          "github": "https://github.com/prabhjotschugh/When-Less-is-More-InSAR-Phase-Unwrapping"
+          "github": "https://github.com/prabhjotschugh/When-Less-is-More-InSAR-Phase-Unwrapping",
+          "DOI": "https://doi.org/10.1109/LGRS.2026.3727071"
         }
       },
       {
