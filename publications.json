@@ -114,50 +114,29 @@
         "links": {
           "github": "https://github.com/prabhjotschugh/Genius-AI-SaaS"
         }
-      }
-    ]
-  },
-  {
-    "category": "Under Review",
-    "items": [
-      {
-        "index": 1,
-        "title": "Same Facts, Different Diagnosis: Measuring and Mitigating Narrative Anchoring in Clinical Language Models",
-        "authors": "Prabhjot Singh, Pritam Deka, Vijay Chennareddy",
-        "venue": "Under Review | Submitted to EACL 2027",
-        "description": "This work identifies Narrative Anchoring: a bias where clinical language models shift their diagnostic output based on a patient's sociolinguistic register alone, with no demographic marker ever stated. We introduce NarrativeShield-SDoH, a dataset of 1,000 USMLE clinical vignettes rewritten into three register-distinct personas under an independently audited fact-preservation guarantee. Across seven language models, Narrative Anchoring is statistically significant under direct prompting in every model tested, and chain-of-thought or explicit debiasing instructions mitigate it only partially. We propose NarrativeShield, a three-agent pipeline that structurally extracts and verifies clinical facts before diagnostic reasoning begins, reducing the Narrative Anchoring Gap to near-zero and achieving the most stable diagnostic decisions of any method tested, establishing that structural separation of narrative from clinical fact is key to equitable clinical AI.",
-        "image": ["Images/narrativeshield1.png", "Images/narrativeshield2.jpg"],
-        "tags": ["Narrative Anchoring", "Clinical NLP", "Multi-Agent", "AI Fairness"],
-        "links": {
-          "openreview": "https://openreview.net/pdf?id=BgVqVpiBLb",
-          "github": "https://github.com/prabhjotschugh/narrativeshield-sdoh-medqa",
-          "huggingface": "https://huggingface.co/datasets/Prabhjotschugh/narrativeshield-sdoh-medqa",
-          "arxiv": "https://arxiv.org/abs/2607.27384"
-        }
       },
       {
-        "index": 2,
+        "index": 9,
         "title": "Talking a Rejection Into an Accept: How Confidence Framing Fools (Some) LLM Reviewers",
         "authors": "Prabhjot Singh, Somnath Luitel, Manmeet Singh",
-        "venue": "Under Review | NeurIPS 2026 Workshop on AI-Native Academia: Authorship, Peer Review, and Conference Governance under AI",
+        "venue": "NeurIPS 2026 Workshop on AI-Native Academia: Authorship, Peer Review, and Conference Governance under AI",
         "description": "This work tests whether AI-generated peer review is uniformly vulnerable to style manipulation or only in specific models, evaluating 9 open-weight reviewer models on 100 real ICLR 2026 and ICML 2026 abstracts rewritten into five controlled confidence tones with every factual claim held fixed. Hedging is punished in all 9 of 9 models, the only effect that replicates without exception, while overclaiming splits models in opposite directions, from severe penalties to significant rewards. Confidence reframing flips a genuine rejection into an accept in up to 35.7% of eligible cases, but only in 2 of 9 models with adequate sample size, while which reviewer model is deployed explains more variance in a paper's score than any style manipulation tested, arguing that model-selection auditing, not blanket AI-reviewer distrust, is the actionable lever for venues already deploying these systems.",
         "image": ["Images/talking_to_accept_1.jpg", "Images/talking_to_accept_2.jpg"],
         "tags": ["LLM-as-a-Judge", "Peer Review", "AI Fairness", "NLP"],
         "links": {
+          "openreview": "https://openreview.net/forum?id=3EdBpjnug4",
           "github": "https://github.com/prabhjotschugh/Talking-into-an-accept"
         }
       },
       {
-        "index": 3,
-        "title": "The Trust Gap: LLM Judges Are Consistent, Not Correct",
-        "authors": "Prabhjot Singh, Bhushan Pawar",
-        "venue": "Under Review | NeurIPS 2026 Workshop \"Who Verifies the Agents? Toward Reliable Agent Development\"",
-        "description": "This work audits whether trusting an LLM judge because it agrees with itself is a safe substitute for checking whether it agrees with reality, testing six independently built judges on 200 real coding-agent trajectories validated against executable outcomes. Every one of the six judges is substantially less accurate against ground truth on trajectories whose surface features are atypical for their outcome, with unanimous accuracy drops of 18 to 42 percentage points, while self-consistency across repeated queries on the same trajectories barely moves, holding significantly for only one of six judges. This validity-reliability dissociation shows self-consistency is not a usable proxy for correctness, and a simple disagreement-triggered escalation-to-human-review protocol recovers 84.9% accuracy on the trajectories it accepts, turning the diagnosis into a practical, low-cost mitigation for teams building agent verification pipelines.",
-        "image": ["Images/trust_gap_1.jpg", "Images/trust_gap_2.jpg"],
-        "tags": ["LLM-as-a-Judge", "Agent Evaluation", "AI Reliability", "NLP"],
-        "links": {
-          "github": "https://github.com/prabhjotschugh/llm-judge-trust-gap"
-        }
+        "index": 10,
+        "title": "ReviewShield: Defending LLM Reviewers Against In-Paper Prompt Injection under Instruction-Content Entanglement",
+        "authors": "Somnath Luitel, Prabhjot Singh, Suraj Thapa, Manmeet Singh, Josh Durkee",
+        "venue": "NeurIPS 2026 Workshop on AI-Native Academia: Authorship, Peer Review, and Conference Governance under AI | Oral Presentation ⭐",
+        "description": "This work investigates in-paper prompt injection in AI-assisted scientific peer review, a setting complicated by instruction-content entanglement, where the untrusted manuscript is simultaneously the attack channel and the legitimate subject of critical review. We introduce ReviewShield-Bench, spanning ~800 open-access arXiv manuscripts and five in-paper injection families, and a paired difference-in-differences protocol that isolates each defense's effect on attack-induced score inflation from confounds in clean-paper calibration. Under this corrected metric, DPO at its default learning rate produces no significant reduction in attack effect on any of five families, while supervised fine-tuning (SFT) on preferred responses alone significantly reduces attacker-targeted score inflation across all five seen and held-out families, though partly by reversing the direction of the score response rather than eliminating it. A simple defensive prompt also provides strong protection, particularly against direct override and stealth attacks. We release the benchmark, evaluation harness, and paired difference-in-differences protocol to support more reliable evaluation of future defenses against this emerging threat.",
+        "image": "Images/ReviewShield.png",
+        "tags": ["LLM Peer Review", "Prompt Injection", "Adversarial Robustness", "AI Safety"],
+        "links": {}
       }
     ]
   },
@@ -174,6 +153,30 @@
         "links": {
           "arxiv": "https://arxiv.org/abs/2608.01409",
           "github": "https://github.com/prabhjotschugh/care-xai"
+        }
+      },
+      {
+        "index": 2,
+        "title": "Same Facts, Different Diagnosis: Measuring and Mitigating Narrative Anchoring in Clinical Language Models",
+        "authors": "Prabhjot Singh, Pritam Deka, Vijay Chennareddy",
+        "venue": "Work in Progress",
+        "description": "This work identifies Narrative Anchoring: a bias where clinical language models shift their diagnostic output based on a patient's sociolinguistic register alone, with no demographic marker ever stated. We introduce NarrativeShield-SDoH, a dataset of 1,000 USMLE clinical vignettes rewritten into three register-distinct personas under an independently audited fact-preservation guarantee. Across seven language models, Narrative Anchoring is statistically significant under direct prompting in every model tested, and chain-of-thought or explicit debiasing instructions mitigate it only partially. We propose NarrativeShield, a three-agent pipeline that structurally extracts and verifies clinical facts before diagnostic reasoning begins, reducing the Narrative Anchoring Gap to near-zero and achieving the most stable diagnostic decisions of any method tested, establishing that structural separation of narrative from clinical fact is key to equitable clinical AI.",
+        "tags": ["Narrative Anchoring", "Clinical NLP", "Multi-Agent", "AI Fairness"],
+        "links": {
+          "github": "https://github.com/prabhjotschugh/narrativeshield-sdoh-medqa",
+          "huggingface": "https://huggingface.co/datasets/Prabhjotschugh/narrativeshield-sdoh-medqa",
+          "arxiv": "https://arxiv.org/abs/2607.27384"
+        }
+      },
+      {
+        "index": 3,
+        "title": "The Trust Gap: LLM Judges Are Consistent, Not Correct",
+        "authors": "Prabhjot Singh, Bhushan Pawar",
+        "venue": "Work in Progress",
+        "description": "This work audits whether trusting an LLM judge because it agrees with itself is a safe substitute for checking whether it agrees with reality, testing six independently built judges on 200 real coding-agent trajectories validated against executable outcomes. Every one of the six judges is substantially less accurate against ground truth on trajectories whose surface features are atypical for their outcome, with unanimous accuracy drops of 18 to 42 percentage points, while self-consistency across repeated queries on the same trajectories barely moves, holding significantly for only one of six judges. This validity-reliability dissociation shows self-consistency is not a usable proxy for correctness, and a simple disagreement-triggered escalation-to-human-review protocol recovers 84.9% accuracy on the trajectories it accepts, turning the diagnosis into a practical, low-cost mitigation for teams building agent verification pipelines.",
+        "tags": ["LLM-as-a-Judge", "Agent Evaluation", "AI Reliability", "NLP"],
+        "links": {
+          "github": "https://github.com/prabhjotschugh/llm-judge-trust-gap"
         }
       }
     ]
